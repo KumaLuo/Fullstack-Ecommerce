@@ -17,3 +17,28 @@ body{
   color: #fff;
   font-size: 16px;
   font-weight: 500;}
+
+.headerwrapper .header{width: 100%;height: auto; padding: 10px 0px;}
+.logowrapper img{width: 100%;}
+
+.headerwrapper .header .part2 .countryDrop{
+  width: 150px; 
+  height: 60px; 
+  min-width: 150px;
+  text-align: left;
+  justify-content: flex-start !important;
+  color: #000 !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  border-radius: 7px !important;
+  padding: 10px !important;}
+.headerwrapper .header .part2 .countryDrop .label{
+  font-size: 12px !important; 
+  text-transform: capitalize !important; 
+  color: rgba(0, 0, 0, 0.5) !important;
+line-height: 16px;}
+.headerwrapper .header .part2 .countryDrop .name {
+  font-size: 14px !important;
+  text-transform: capitalize !important;
+  color: #233a95 !important;
+  font-weight: 700 !important;
+  line-height: 16px;}

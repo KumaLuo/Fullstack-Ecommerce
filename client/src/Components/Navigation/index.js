@@ -20,9 +20,9 @@ const Navigation = () => {
 
                     <div className="col-sm-3 navPart1">
                         <Button className='allTab align-items-center'>
-                            <span className="icon1 mr-2"><IoIosMenu /></span>
+                            <span className="icon1 mr-3"><IoIosMenu /></span>
                             <span className='text'>ALL CATEGORIES</span>
-                            <span className="icon2 ml-2"><FaAngleDown /></span>
+                            <span className="icon2 ml-3"><FaAngleDown /></span>
                         </Button>
                     </div>
 

@@ -166,6 +166,15 @@ header .part3 .user-icon svg{font-size: 25px;}
   height: 20px;
 }
 
+nav .navPart1{
+  max-width: 21.5%;
+  flex : 0 0 21.5%;
+}
+nav .navPart2{
+  max-width: 78.5%;
+  flex : 0 0 78.5%;
+}
+
 nav .allTab{
   background: #2bbef9;
   padding: 8px 25px !important;
@@ -174,7 +183,7 @@ nav .allTab{
 nav .allTab *{color: #fff;}
 nav .allTab :hover{background: #2bbef9;}
 nav .allTab .text{font-weight: 600;}
-nav .allTab svg{font-size: 20px !important;}
+nav .allTab svg{font-size: 15px !important;}
 nav .allTab .icon1{
   position: relative; 
   top: -2px;}
@@ -184,9 +193,10 @@ nav .allTab .icon2 {
 }
 
 nav .navPart2 ul{margin-bottom: 0px;}
-nav .navPart2 ul li a{
-  font-size: 16px;
-  font-weight: 600;
+nav .navPart2 ul li a{text-decoration: none;}
+nav .navPart2 ul li a button{
+  font-size: 15px;
+  font-weight: 500;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.7);
   text-transform: uppercase;
@@ -195,7 +205,7 @@ nav .navPart2 ul li a{
   padding: 10px 8px;
   transition: all 0.2s ease-in-out;
   border-radius: 25px;}
-nav .navPart2 ul li a:hover{
+nav .navPart2 ul li a button:hover{
   background: #f0faff;
   color: #2bbef9;}
 nav .navPart2 ul li a svg{font-size: 20px;}

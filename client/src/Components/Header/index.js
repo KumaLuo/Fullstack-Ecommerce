@@ -5,9 +5,15 @@ import SearchBar from './SearchBar';
 import Button from '@mui/material/Button';
 import { FiUser } from "react-icons/fi";
 import { IoBagOutline } from "react-icons/io5";
+import { useContext } from 'react';
+import { MyContext } from '../../App';
+import Navigation from '../Navigation';
 
 
 const Header = () => {
+
+    const context = useContext(MyContext);
+
     return (
         <>
             <div className="headerwrapper">
@@ -28,7 +34,9 @@ const Header = () => {
                             </div>
 
                             <div className="col-sm-10 d-flex align-items-center part2">
-                                <CountryDropdown />
+                                
+                                
+                                { context.values.locationList.length!==0 && <CountryDropdown />}
 
                                 <SearchBar />
 
@@ -51,6 +59,8 @@ const Header = () => {
                         </div>
                     </div>
                 </header>
+
+                <Navigation/>
             </div>
         </>
     );

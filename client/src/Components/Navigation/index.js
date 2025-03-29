@@ -11,6 +11,7 @@ import { LuGrape } from "react-icons/lu";
 import { MdOutlineArticle } from "react-icons/md";
 import { MdOutlineContactSupport } from "react-icons/md";
 import { useState } from "react";
+import { FaAngleRight } from "react-icons/fa6";
 
 
 const Navigation = () => {
@@ -33,14 +34,40 @@ const Navigation = () => {
                             </Button>
                             <div className={`sideBar ${SideBarOpen ? 'open' : ''}`}>
                                 <ul>
+                                    <li><Link to='/'> <Button>Electronic <FaAngleRight className="ml-auto" /></Button></Link>
+                                        <div className="subMenu">
+                                            <li><Link to='/'> <Button>Electronic </Button></Link></li>
+                                            <li><Link to='/'> <Button>Electronic </Button></Link></li>
+                                            <li><Link to='/'> <Button>Electronic </Button></Link></li>
+                                            <li><Link to='/'> <Button>Electronic </Button></Link></li>
+                                            <li><Link to='/'> <Button>Electronic </Button></Link></li>
+                                            <li><Link to='/'> <Button>Electronic </Button></Link></li>
+                                            <li><Link to='/'> <Button>Electronic </Button></Link></li>
+                                        </div>
+                                    </li>
+                                    <li><Link to='/'> <Button>Electronic </Button></Link></li>
+                                    <li><Link to='/'> <Button>Electronic <FaAngleRight className="ml-auto" /></Button></Link>
+                                        <div className="subMenu">
+                                            <li><Link to='/'> <Button>Electronic </Button></Link></li>
+                                            <li><Link to='/'> <Button>Electronic </Button></Link></li>
+                                            <li><Link to='/'> <Button>Electronic </Button></Link></li>
+                                            <li><Link to='/'> <Button>Electronic </Button></Link></li>
+                                            <li><Link to='/'> <Button>Electronic </Button></Link></li>
+                                            <li><Link to='/'> <Button>Electronic </Button></Link></li>
+                                            <li><Link to='/'> <Button>Electronic </Button></Link></li>
+                                        </div>
+                                    </li>
                                     <li><Link to='/'> <Button>Electronic </Button></Link></li>
                                     <li><Link to='/'> <Button>Electronic </Button></Link></li>
                                     <li><Link to='/'> <Button>Electronic </Button></Link></li>
                                     <li><Link to='/'> <Button>Electronic </Button></Link></li>
                                     <li><Link to='/'> <Button>Electronic </Button></Link></li>
-                                    <li><Link to='/'> <Button>Electronic </Button></Link></li>
-                                    <li><Link to='/'> <Button>Electronic </Button></Link></li>
-                                    <li><Link to='/'> <Button>Electronic </Button></Link></li>
+                                </ul>
+                                <div class="separator"></div>
+                                <ul className="list">
+                                    <li><Link to='/'>Electronic</Link></li>
+                                    <li><Link to='/'>Electronic</Link></li>
+                                    <li><Link to='/'>Electronic</Link></li>
                                 </ul>
                             </div>
                         </div>

@@ -537,16 +537,127 @@ nav .navPart2 ul li .subMenu a button {
   font-size: 25px !important;
 }
 
+.productSlider .slick-slider {
+  padding-right: 2px !important;
+}
+
 .productItem {
   width: 100%;
   height: auto;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid transparent !important;
+}
+
+.productSlider .slick-current .productItem {
+  border-left: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
 
 .productItem .imgWrap {
   width: 100%;
   height: 100%;
   padding: 20px;
+  position: relative;
+}
+
+.productItem .imgWrap .badge-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 100;
+
+}
+
+.productItem .imgWrap .badge-container .badge {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 12px;
+  width: fit-content;
+  border-radius: 5px;
+}
+
+.productItem .imgWrap .badge-container .badge-primary {
+  background: #2bbef9;
+}
+
+.productItem .imgWrap .badge-container .badge-recommend {
+  background: gray;
+  color: #fff !important;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.productItem .imgWrap .badge-container .badge-organic {
+
+  background: #e5f8ed;
+  border-radius: 1.125rem;
+  color: #038e42 !important;
+}
+
+.productItem .imgWrap button {
+  align-items: center;
+  justify-content: center;
+  min-width: 40px !important;
+  height: 40px !important;
+  width: 40px !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #2e2e2e !important;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 100;
+  transform: translateX(50%);
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+.productItem .imgWrap button svg {
+  opacity: 0.8;
+  font-size: 16px;
+}
+
+.productItem .imgWrap .likeIcon svg {
+  font-size: 18px !important;
+}
+
+.productItem .imgWrap .actionIcons {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.productItem .imgWrap .likeIcon {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.productItem .imgWrap button:hover {
+  background: #233a95 !important;
+  color: #fff !important;
+}
+
+.productItem:hover button.fullscreen {
+  transform: translateX(0px);
+  transition-delay: 0ms;
+  opacity: 1;
+  visibility: inherit;
+  pointer-events: auto;
+}
+
+.productItem:hover button.likeIcon {
+  transform: translateX(0px);
+  transition-delay: 0.1s;
+  opacity: 1;
+  visibility: inherit;
+  pointer-events: auto;
 }
 
 .productItem .productInfo {
@@ -562,9 +673,46 @@ nav .navPart2 ul li .subMenu a button {
   text-transform: capitalize !important;
 }
 
+.productItem .productInfo .success {
+  color: green !important;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.productItem .productInfo .text-danger {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.productItem .productInfo .oldPrice {
+  text-decoration: line-through;
+  color: #8b8b8b !important;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.productItem .productInfo .price {
+  font-size: 18px;
+  font-weight: 700;
+  color: red !important;
+}
+
+.productItem .productInfo button {
+  background: transparent !important;
+  color: #2bbef9 !important;
+  border: 1px solid #2bbef9 !important;
+  border-radius: 30px !important;
+  text-transform: capitalize !important;
+}
+
+.productItem .productInfo button:hover {
+  background: #2bbef9 !important;
+  color: #fff !important;
+}
+
 .productSlider .slick-arrow {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   z-index: 100;
   width: 40px !important;

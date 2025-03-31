@@ -8,7 +8,7 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 
 
-const ProductItem = ({ product }) => {
+const ProductItem = ({ product, className }) => {
 
 
     const [likedMap, setLikedMap] = useState({});
@@ -19,7 +19,7 @@ const ProductItem = ({ product }) => {
         }));
     };
     return (
-        <div className="productItem" id={product.id}>
+        <div className={`productItem ${className}`}>
             <div className="imgWrap">
                 <img src={product.image} alt={product.name} className="w-100" />
                 <div className="badge-container">

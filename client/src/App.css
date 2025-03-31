@@ -259,7 +259,6 @@ nav .navPart1 .catWrapper .sideBar {
   left: 0px;
   margin-top: 8px;
   width: 120%;
-  height: auto;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 10px 20px;
@@ -304,8 +303,6 @@ nav .navPart1 .catWrapper .sideBar .list li a {
 nav .navPart1 .catWrapper .sideBar .list li a:hover {
   color: #2bbef9 !important;
 }
-
-
 
 nav .navPart1 .catWrapper .sideBar ul li button {
   width: 100%;
@@ -514,10 +511,19 @@ nav .navPart2 ul li .subMenu a button {
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeProducts .banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .productRow .hd {
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 600;
 }
 
@@ -541,7 +547,7 @@ nav .navPart2 ul li .subMenu a button {
   padding-right: 2px !important;
 }
 
-.productItem {
+.productSlider .productItem {
   width: 100%;
   height: auto;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -559,6 +565,14 @@ nav .navPart2 ul li .subMenu a button {
   position: relative;
 }
 
+.productItem .imgWrap img {
+  transition: all 0.3s ease-in-out;
+}
+
+.productItem:hover .imgWrap img {
+  transform: scale(1.1);
+}
+
 .productItem .imgWrap .badge-container {
   position: absolute;
   top: 20px;
@@ -566,7 +580,7 @@ nav .navPart2 ul li .subMenu a button {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  z-index: 100;
+  z-index: 90;
 
 }
 
@@ -610,10 +624,8 @@ nav .navPart2 ul li .subMenu a button {
   pointer-events: none;
   z-index: 100;
   transform: translateX(50%);
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
-
-
 
 .productItem .imgWrap button svg {
   opacity: 0.8;
@@ -722,4 +734,105 @@ nav .navPart2 ul li .subMenu a button {
   justify-content: center;
   background: #444444;
   border-radius: 100%;
+}
+
+.productRow .banner-link {
+  text-decoration: none;
+}
+
+.productRow .banner-health {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #f8efea;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.productRow .banner-health .banner-text {
+  width: 80%;
+  padding: 2.5rem
+}
+
+
+.productRow .banner-health .banner-text h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #71778e;
+  margin-bottom: 0px;
+  line-height: 1.2;
+  letter-spacing: -.8px;
+}
+
+.productRow .banner-health .banner-text p {
+  font-size: 0.875rem;
+  color: #9b9bb4;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.productRow .banner-health .banner-img {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: absolute;
+  right: 10px;
+}
+
+.productRow .cardsRow {
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.productRow .cardsRow .grid-item {
+  position: relative;
+  width: 25%;
+  display: flex;
+  overflow: hidden;
+}
+
+.productRow .cardsRow .grid-item .productItem {
+  width: 100%;
+  height: auto;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.productRow .cardsRow .grid-item .productItem.show .productInfo button {
+  display: none;
+}
+
+.productRow .cardsRow .grid-item .productItem.shadow {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #fff;
+  align-self: self-start;
+  z-index: 0;
+}
+
+.productRow .cardsRow .grid-item .productItem.shadow .productInfo button {
+  background: #233a95 !important;
+  color: #fff !important;
+  border: 1px solid #233a95 !important;
+  border-radius: 30px !important;
+  text-transform: capitalize !important;
+  transform: translateY(50%);
+}
+
+.productRow .cardsRow .grid-item:hover .productItem.shadow {
+  visibility: inherit;
+  opacity: 1;
+  z-index: 100;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.productRow .cardsRow .grid-item:hover .productItem.shadow .productInfo button {
+  transform: translateY(0px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.productRow .cardsRow .grid-item:hover {
+  overflow: visible;
 }

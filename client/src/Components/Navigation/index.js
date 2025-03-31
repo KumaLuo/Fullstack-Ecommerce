@@ -17,8 +17,6 @@ import { FaAngleRight } from "react-icons/fa6";
 const Navigation = () => {
     const [SideBarOpen, setSideBarOpen] = useState(false);
 
-
-
     return (
         <nav>
             <div className="container">

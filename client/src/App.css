@@ -836,3 +836,78 @@ nav .navPart2 ul li .subMenu a button {
 .productRow .cardsRow .grid-item:hover {
   overflow: visible;
 }
+
+
+
+.homeCat .container {
+  position: relative;
+  overflow: visible;
+}
+
+.homeCat .container svg {
+  font-size: 40px;
+  color: #3ab87d;
+}
+
+.homeCat .container .custom-swiper-button-prev,
+.homeCat .container .custom-swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  width: 35px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-swiper-button-prev {
+  left: -27px;
+}
+
+.custom-swiper-button-next {
+  right: -20px;
+}
+
+.homeCat .catItem {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #f4f6fa;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.homeCat .catItem img {
+  scale: 0.6;
+  transition: all 0.2s ease-in-out;
+}
+
+.homeCat .catItem h6 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000 !important;
+  text-transform: capitalize !important;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.homeCat .catItem:hover {
+  border: 1px solid #3ab87d !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.homeCat .catItem:hover img {
+  scale: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+
+.homeCat .catItem:hover h6 {
+  color: #3ab87d !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.homeCat .container .mySwiper .swiper-button-prev,
+.homeCat .container .mySwiper .swiper-button-next {
+  display: none !important;
+}

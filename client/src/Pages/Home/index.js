@@ -1,4 +1,5 @@
 import HomeBanner from "../../Components/HomeBanner";
+import HomeCat from "../../Components/HomeCat";
 import Button from '@mui/material/Button';
 import { IoIosArrowRoundForward } from "react-icons/io";
 import React from "react";
@@ -124,11 +125,9 @@ const Home = () => {
     <>
       <HomeBanner />
 
-      <section className="homeCat">
-        <div className="container">
+      <HomeCat />
 
-        </div>
-      </section>
+
       <section className="homeProducts">
         <div className="container">
           <div className="row">

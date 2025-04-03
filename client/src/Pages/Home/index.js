@@ -6,10 +6,6 @@ import React from "react";
 import Slider from "react-slick";
 import ProductItem from "../../Components/ProductItem";
 import { Link } from "react-router-dom";
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import 'swiper/css';
-// import 'swiper/css/pagination';
-// import {Navigation} from 'swiper/modules';
 
 const Home = () => {
 
@@ -127,21 +123,20 @@ const Home = () => {
 
       <HomeCat />
 
-
       <section className="homeProducts">
         <div className="container">
           <div className="row">
+
             <div className="col-md-3">
               <div className="banner mb-5">
                 <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/banner-box.jpg" alt="product"
                   className="cursor w-100" />
               </div>
-              <div className="banner">
+
+              <div className="banner mb-5">
                 <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/bacola-banner-04.jpg" alt="product"
                   className="cursor w-100" />
               </div>
-
-
             </div>
 
             <div className="col-md-9 productRow">
@@ -194,58 +189,6 @@ const Home = () => {
                 ))}
               </div>
 
-
-
-
-
-              {/* <div className="productRow w-100">
-                <Swiper
-                  spaceBetween={30}
-                  slidesPerView={4}
-                  pagination={{
-                    clickable: true,
-                  }}
-                  modules={['navigation']}
-                  className="mySwiper"
-                >
-                  <SwiperSlide>
-                    <div className="productItem">
-                      <div className="imgWrap">
-                        <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62-346x310.jpg" alt="product" className="w-100" />
-                      </div>
-
-                      <div className="productInfo">
-                        <div className="productName mb-1">
-                          <Link to="/product/1">All Natural Italian-Style Chicken Meatballs</Link>
-                        </div>
-
-                        <span className="success">In Stock</span>
-
-                        <div className="productRating d-flex align-items-center mt-2">
-                          <Rating
-                            name="read-only"
-                            value={4.5}
-                            precision={0.5}
-                            readOnly
-                            size="small"
-                          />
-                        </div>
-
-                        <div className="productPrice mt-2">
-                          <span className="oldPrice mr-2">$30.00</span>
-                          <span className="price">$25.00</span>
-                        </div>
-
-                        <Button className="addToCartBtn mt-2 w-100">Add to Cart</Button>
-
-                      </div>
-
-                    </div>
-                  </SwiperSlide>
-
-                </Swiper>
-
-              </div> */}
 
 
             </div>

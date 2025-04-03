@@ -67,6 +67,116 @@ body {
   font-weight: 500;
 }
 
+.headerwrapper .header-top {
+  border-bottom: 1px solid #e3e4e6;
+  font-size: 12px;
+}
+
+.headerwrapper .header-top .container {
+  min-height: 2.5rem;
+  max-height: 2.5rem;
+}
+
+.headerwrapper .header-top .container .column-left li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.headerwrapper .header-top .container .column-left a {
+  list-style: none;
+  color: #000;
+  text-decoration: none;
+}
+
+.headerwrapper .header-top .container .column-left a:hover {
+  color: #2bbef9 !important;
+}
+
+.headerwrapper .header-top .container .column-center .swiperTextBanner {
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+  padding: 0 5px;
+}
+
+.headerwrapper .header-top .container .column-center .swiperTextBanner .swiper {
+  height: 100%;
+}
+
+.headerwrapper .header-top .container .column-center .swiperTextBanner .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.headerwrapper .header-top .container .column-center .swiperTextBanner .swiper-slide h6 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+.headerwrapper .header-top .container .column-right a {
+  color: #2bbef9 !important;
+  font-size: 14px;
+  font-weight: 800 !important;
+}
+
+.headerwrapper .header-top .container .column-right .switchers .language,
+.headerwrapper .header-top .container .column-right .switchers .currency {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+
+.headerwrapper .header-top .container .column-right .switchers .language:hover,
+.headerwrapper .header-top .container .column-right .switchers .currency:hover {
+  color: #2bbef9 !important;
+  cursor: default;
+}
+
+.headerwrapper .header-top .container .column-right .switchers .language:hover .dropdown.lan {
+  opacity: 1;
+  visibility: inherit;
+  transition: all 0.3s ease-in-out;
+}
+
+.headerwrapper .header-top .container .column-right .switchers .currency:hover .dropdown.cur {
+  opacity: 1;
+  visibility: inherit;
+  transition: all 0.3s ease-in-out;
+}
+
+.headerwrapper .header-top .container .column-right .switchers .dropdown {
+  color: #000 !important;
+  position: absolute;
+  top: 160%;
+  left: 0px;
+  min-width: auto;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.headerwrapper .header-top .container .column-right .switchers .dropdown li {
+  list-style: none;
+  border-left: none;
+  padding: 5px;
+}
+
+.headerwrapper .header-top .container .column-right .switchers .dropdown li:hover {
+  color: #2bbef9 !important;
+}
+
+
+
 .headerwrapper .header {
   width: 100%;
   height: auto;

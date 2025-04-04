@@ -7,6 +7,7 @@ import Slider from "react-slick";
 import ProductItem from "../../Components/ProductItem";
 import { Link } from "react-router-dom";
 import VerticalText from "../../Components/BannerText/vertical";
+import HorizontalText from "../../Components/BannerText/horizontal";
 
 
 const Home = () => {
@@ -120,6 +121,16 @@ const Home = () => {
     des1: "Freshest Products",
     des2: "Every Hours.",
     price: 24.99,
+  },
+  {
+    des1: "Legumes & Cereals",
+    des2: "Feed your family the best",
+    discount: 40,
+  },
+  {
+    des1: "Dairy & Eggs",
+    des2: "A different kind of grocery store",
+    discount: 40,
   }
   ]
 
@@ -208,13 +219,13 @@ const Home = () => {
               </div>
 
               <div className="d-flex bannerSection">
-                <div className="banner mb-5">
-                  <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/08/bacola-banner-01.jpg" alt="product"
-                    className="cursor w-100" />
+                <div className="banner mb-5 cursor">
+                  <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/08/bacola-banner-01.jpg" alt="product" />
+                  <HorizontalText product={bannerProducts[2]} />
                 </div>
-                <div className="banner mb-5">
-                  <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/08/bacola-banner-02.jpg" alt="product"
-                    className="cursor w-100" />
+                <div className="banner mb-5 cursor">
+                  <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/08/bacola-banner-02.jpg" alt="product" />
+                  <HorizontalText product={bannerProducts[3]} />
                 </div>
               </div>
 

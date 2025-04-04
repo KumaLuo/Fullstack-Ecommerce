@@ -671,8 +671,6 @@ nav .navPart2 ul li .subMenu a button {
   border-radius: 30px;
 }
 
-
-
 .homeProducts .banner img {
   width: 100%;
   height: 100%;
@@ -998,6 +996,25 @@ nav .navPart2 ul li .subMenu a button {
 
 .productRow .bannerSection {
   gap: 20px;
+}
+
+.productRow .bannerSection .banner .horizontal {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.productRow .bannerSection .banner .horizontal h6 {
+  font-size: 14px;
+  color: #038e42;
+  margin-bottom: 10px;
+}
+
+.productRow .bannerSection .banner .horizontal h4 {
+  font-weight: 700;
+}
+
+.homeProducts .bannerSection .banner .bannerText .banner-footer {
+  background: #c2c2d3;
 }
 
 

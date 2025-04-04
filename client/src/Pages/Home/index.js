@@ -6,6 +6,8 @@ import React from "react";
 import Slider from "react-slick";
 import ProductItem from "../../Components/ProductItem";
 import { Link } from "react-router-dom";
+import VerticalText from "../../Components/BannerText/vertical";
+
 
 const Home = () => {
 
@@ -107,6 +109,20 @@ const Home = () => {
       price: 24,
     },]
 
+  const bannerProducts = [{
+    name: "Bacola Natural Foods",
+    des1: "Special Organic",
+    des2: "Roats Burger",
+    price: 14.99,
+  },
+  {
+    name: "Best Bakery Products",
+    des1: "Freshest Products",
+    des2: "Every Hours.",
+    price: 24.99,
+  }
+  ]
+
   var productSliderOptions = {
     dots: false,
     arrows: true,
@@ -128,14 +144,16 @@ const Home = () => {
           <div className="row">
 
             <div className="col-md-3">
-              <div className="banner mb-5">
-                <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/banner-box.jpg" alt="product"
-                  className="cursor w-100" />
-              </div>
+              <div className="sticky">
+                <div className="banner mb-5 cursor">
+                  <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/banner-box.jpg" alt="product" />
+                  <VerticalText product={bannerProducts[0]} className="banner-1" />
+                </div>
 
-              <div className="banner mb-5">
-                <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/bacola-banner-04.jpg" alt="product"
-                  className="cursor w-100" />
+                <div className="banner mb-5 cursor">
+                  <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/bacola-banner-04.jpg" alt="product" />
+                  <VerticalText product={bannerProducts[1]} className="banner-2" />
+                </div>
               </div>
             </div>
 
@@ -187,6 +205,17 @@ const Home = () => {
                     <ProductItem className="shadow" product={product} />
                   </div>
                 ))}
+              </div>
+
+              <div className="d-flex bannerSection">
+                <div className="banner mb-5">
+                  <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/08/bacola-banner-01.jpg" alt="product"
+                    className="cursor w-100" />
+                </div>
+                <div className="banner mb-5">
+                  <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/08/bacola-banner-02.jpg" alt="product"
+                    className="cursor w-100" />
+                </div>
               </div>
 
 

@@ -237,34 +237,6 @@ const Home = () => {
         </div >
       </section >
 
-      <section className="newsletterSection mt-3 mb-5 d-flex align-items-center">
-        <div className="container">
-          <div className="row">
-
-            <div className="col-md-5">
-              <div className="newsletter">
-                <p className="mb-1 text-white" >$20 discount for your first order</p>
-                <h3 className="text-white mb-3">Join our newsletter and get...</h3>
-                <p className="text-light">Join our email subscription now to get updates on promotions and coupons.</p>
-
-                <form className="d-flex align-items-center justify-content-center">
-                  <IoMailOutline />
-                  <input type="email" className="form-control" placeholder="Your email address" />
-                  <Button className="btn btn-primary">Subscribe</Button>
-                </form>
-              </div>
-            </div>
-
-            <div className="col-md-7 align-items-end d-flex justify-content-end">
-              <div className="newsIcon">
-                <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/coupon.png" alt="product" />
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
     </>
   );
 }

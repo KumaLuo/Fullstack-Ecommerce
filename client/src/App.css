@@ -1168,3 +1168,140 @@ nav .navPart2 ul li .subMenu a button {
   outline: none;
   box-shadow: none;
 }
+
+footer {
+  width: 100%;
+  height: auto;
+}
+
+footer .widgets,
+footer .iconBoxes {
+  background: #f7f8fe;
+  width: 100%;
+}
+
+footer .iconBoxes .container {
+  padding: 35px 0px;
+}
+
+footer .iconBoxes .container .row>div:not(:last-child) {
+  border-right: 1px solid #dc3545;
+}
+
+footer .iconBoxes svg {
+  font-size: 28px;
+  margin-right: 5px;
+}
+
+footer .widgets .container {
+  border-top: 1px solid #dc3545;
+  padding: 100px 0px;
+  width: 100%;
+}
+
+footer .widgets .container .col-five {
+  padding: 0px 15px;
+  width: 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+footer .widgets h4 {
+  color: #202435 !important;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+footer .widgets .col-five ul li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+footer .widgets .col-five ul li a {
+  font-size: 14px;
+  color: #71778e !important;
+  text-decoration: none;
+}
+
+footer .contacts .container {
+  border-bottom: 1px solid #dc3545;
+  padding: 46px 0px;
+}
+
+footer .contacts .col-right li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .contacts .col-right li a {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  font-size: 15px;
+  color: #233a95 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e4e5ee !important;
+}
+
+footer .contacts .col-right h6 {
+  font-size: 14px;
+  color: #202435 !important;
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+
+footer .contacts .col-right span {
+  font-size: 12px;
+  color: #202435 !important;
+  opacity: 0.5;
+}
+
+footer .contacts .col-left .phoneIcon {
+  font-size: 18px;
+  flex: 0 0 42px;
+  max-width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 1px solid #e4e5ee !important;
+}
+
+footer .contacts .col-left h6 {
+  margin-bottom: 3px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #202435 !important;
+}
+
+footer .contacts .col-left span {
+  font-size: 11px;
+  color: #202435 !important;
+  opacity: 0.5;
+}
+
+footer .footerBottom .container {
+  padding: 30px 15px;
+}
+
+footer .footerBottom .container .copyright {
+  font-size: 12px;
+  color: #9b9bb4 !important;
+  line-height: 1.5;
+}
+
+footer .footerBottom .container ul {
+  font-size: 12px;
+  margin-bottom: 0px;
+  gap: 10px;
+}
+
+footer .footerBottom .container ul a {
+  color: #9b9bb4 !important;
+}

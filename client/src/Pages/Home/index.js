@@ -2,7 +2,6 @@ import HomeBanner from "../../Components/HomeBanner";
 import HomeCat from "../../Components/HomeCat";
 import Button from '@mui/material/Button';
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { IoMailOutline } from "react-icons/io5";
 import React from "react";
 import Slider from "react-slick";
 import ProductItem from "../../Components/ProductItem";
@@ -17,55 +16,77 @@ const Home = () => {
     {
       id: 1,
       name: "All Natural Italian-Style Chicken Meatballs",
-      image: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62-346x310.jpg",
-      discount: 20,
+      image: ["https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62.jpg",
+        "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image2-47.jpg",
+        "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image3-35.jpg"
+      ],
+      discount: 23,
       recommended: true,
-      organic: true,
+      organic: false,
       stock: 10,
       rating: 4.5,
-      oldPrice: 30,
-      price: 24,
+      oldPrice: 9.35,
+      price: 7.25,
+      brands: "Welch's",
+      SKU: "ZU49VOR",
+      reviewCount: "1",
+      description: "Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent",
+      type: 'Organic',
+      MFG: "Jun 04.2025",
+      LIFE: "30 days",
+      category: ["Meats & Seafood"],
+      tags: ["Meat", "Chicken", " Organic", "Natural"],
     },
     {
       id: 2,
       name: "Field Roast Chao Cheese Creamy Original",
-      image: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-46-346x310.jpg",
+      image: ["https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-46.jpg",
+        "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-46.jpg"
+      ],
       discount: 19,
       recommended: false,
       organic: true,
       stock: 0,
-      rating: 4.5,
+      rating: 5.0,
       oldPrice: 24,
       price: 19.5,
     },
     {
       id: 3,
-      name: "All Natural Italian-Style Chicken Meatballs",
-      image: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62-346x310.jpg",
-      discount: 20,
-      recommended: true,
-      organic: false,
+      name: "Blue Diamond Almonds Lightly Salted",
+      image: ["https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-59.jpg",
+        "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image3-33.jpg"
+      ],
+      discount: 10,
+      recommended: false,
+      organic: true,
       stock: 10,
-      rating: 4.5,
-      oldPrice: 30,
-      price: 24,
+      rating: 4.0,
+      oldPrice: 11.68,
+      price: 10.58,
     },
     {
       id: 4,
-      name: "All Natural Italian-Style Chicken Meatballs",
-      image: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62-346x310.jpg",
-      discount: 20,
-      recommended: true,
+      name: "Nestle Original Coffee-Mate Coffee Creamer",
+      image: ["https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-32.jpg",
+        "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image2-27.jpg",
+        "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image4-1.jpg"
+      ],
+      discount: 15,
+      recommended: false,
       organic: false,
       stock: 10,
-      rating: 4.5,
-      oldPrice: 30,
-      price: 24,
+      rating: 4.9,
+      oldPrice: 13.99,
+      price: 11.99,
     },
     {
       id: 5,
       name: "All Natural Italian-Style Chicken Meatballs",
-      image: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62-346x310.jpg",
+      image: ["https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62.jpg",
+        "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image2-47.jpg",
+        "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image3-35.jpg"
+      ],
       discount: 20,
       recommended: true,
       organic: true,
@@ -77,7 +98,8 @@ const Home = () => {
     {
       id: 6,
       name: "Field Roast Chao Cheese Creamy Original",
-      image: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-46-346x310.jpg",
+      image: ["https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-46.jpg"
+      ],
       discount: 19,
       recommended: false,
       organic: true,
@@ -89,7 +111,10 @@ const Home = () => {
     {
       id: 7,
       name: "All Natural Italian-Style Chicken Meatballs",
-      image: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62-346x310.jpg",
+      image: ["https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62.jpg",
+        "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image2-47.jpg",
+        "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image3-35.jpg"
+      ],
       discount: 20,
       recommended: true,
       organic: false,
@@ -101,8 +126,10 @@ const Home = () => {
     {
       id: 8,
       name: "All Natural Italian-Style Chicken Meatballs",
-      image: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62-346x310.jpg",
-      discount: 20,
+      image: ["https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62.jpg",
+        "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image2-47.jpg",
+        "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image3-35.jpg"
+      ],
       recommended: true,
       organic: false,
       stock: 10,
@@ -200,6 +227,14 @@ const Home = () => {
                   </div>
                 </div>
               </Link>
+
+              <Link to="/" className="promotion-link align-items-center mb-4 d-flex justify-content-center">
+                <span>Super discount for you <strong>first purchase</strong></span>
+                <span className="promotion-code">free25bac</span>
+                <span className="promotion-btm">Use discount code in checkout!</span>
+              </Link>
+
+
 
 
               <div className="d-flex align-items-center mb-4">

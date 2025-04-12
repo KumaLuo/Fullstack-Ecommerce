@@ -1650,6 +1650,7 @@ footer .footerBottom .container ul a {
   flex: 0 0 25%;
   max-width: 25%;
   width: 25%;
+  padding: 0px 15px;
 }
 
 .product_list_page .product_list .sidebar .filterBox {
@@ -1666,8 +1667,21 @@ footer .footerBottom .container ul a {
 .product_list_page .product_list .sidebar .filterBox .scroll {
   overflow-y: scroll;
   overflow-x: hidden;
-  max-width: 200px;
   max-height: 270px !important;
+}
+
+.product_list_page .product_list .sidebar .filterBox .scroll ul li {
+  margin-bottom: 8px !important;
+}
+
+.product_list_page .product_list .sidebar .filterBox .scroll button {
+  padding: 0px !important;
+  background: transparent !important;
+}
+
+.product_list_page .product_list .sidebar .filterBox .scroll button svg {
+  font-size: 10px !important;
+  color: rgba(113, 119, 142, 1) !important;
 }
 
 .product_list_page .product_list .sidebar .filterBox .scroll::-webkit-scrollbar {
@@ -1675,18 +1689,42 @@ footer .footerBottom .container ul a {
   height: 5px !important;
 }
 
-.product_list_page .product_list .sidebar .filterBox .scroll ul li {
+.product_list_page .product_list .sidebar .filterBox ul li {
   list-style: none;
 }
 
-.product_list_page .product_list .sidebar .filterBox .scroll ul li .css-imrjgg-MuiButtonBase-root-MuiCheckbox-root {
+.product_list_page .product_list .sidebar .filterBox.brands ul li {
+  display: flex;
+}
+
+.product_list_page .product_list .sidebar .filterBox ul .cat-parent {
+  margin-right: 15px !important;
+}
+
+.product_list_page .product_list .sidebar .filterBox ul.cat-child {
+  margin-left: 15px !important;
+  overflow: hidden !important;
+  max-height: 500px !important;
+  transition: max-height 0.5s ease;
+}
+
+.product_list_page .product_list .sidebar .filterBox ul.cat-child.hide {
+  max-height: 0px !important;
+  transition: max-height 0.5s ease;
+}
+
+.product_list_page .product_list .sidebar .filterBox .count {
+  font-size: 14px !important;
+  margin-left: auto !important;
+}
+
+.css-imrjgg-MuiButtonBase-root-MuiCheckbox-root {
   padding: 0px !important;
   border-radius: 0% !important;
 }
 
 .css-19opgx6-MuiFormControlLabel-root {
   margin: 0px !important;
-  margin-bottom: 8px !important;
 }
 
 .MuiFormControlLabel-root:hover .css-imrjgg-MuiButtonBase-root-MuiCheckbox-root:not(.Mui-checked) {

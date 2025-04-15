@@ -10,12 +10,33 @@ import { IoPizzaOutline } from "react-icons/io5";
 import { LuGrape } from "react-icons/lu";
 import { MdOutlineArticle } from "react-icons/md";
 import { MdOutlineContactSupport } from "react-icons/md";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FaAngleRight } from "react-icons/fa6";
 
 
 const Navigation = () => {
     const [SideBarOpen, setSideBarOpen] = useState(false);
+    const sidebarRef = useRef(null);
+
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (
+                sidebarRef.current &&
+                !sidebarRef.current.contains(event.target)
+            ) {
+                setSideBarOpen(false);
+            }
+        }
+
+        if (SideBarOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [SideBarOpen]);
+
 
     return (
         <nav>
@@ -30,10 +51,10 @@ const Navigation = () => {
                                 <span className='text'>ALL CATEGORIES</span>
                                 <span className="icon2 ml-2"><FaAngleDown /></span>
                             </Button>
-                            <div className={`sideBar ${SideBarOpen ? 'open' : ''}`}>
+                            <div ref={sidebarRef} className={`sideBar ${SideBarOpen ? 'open' : ''}`}>
                                 <ul>
                                     <li><Link to='/'> <Button>Electronic <FaAngleRight className="ml-auto" /></Button></Link>
-                                        <div className="subMenu">
+                                        <ul className="subMenu">
                                             <li><Link to='/'> <Button>Electronic </Button></Link></li>
                                             <li><Link to='/'> <Button>Electronic </Button></Link></li>
                                             <li><Link to='/'> <Button>Electronic </Button></Link></li>
@@ -41,11 +62,11 @@ const Navigation = () => {
                                             <li><Link to='/'> <Button>Electronic </Button></Link></li>
                                             <li><Link to='/'> <Button>Electronic </Button></Link></li>
                                             <li><Link to='/'> <Button>Electronic </Button></Link></li>
-                                        </div>
+                                        </ul>
                                     </li>
                                     <li><Link to='/'> <Button>Electronic </Button></Link></li>
                                     <li><Link to='/'> <Button>Electronic <FaAngleRight className="ml-auto" /></Button></Link>
-                                        <div className="subMenu">
+                                        <ul className="subMenu">
                                             <li><Link to='/'> <Button>Electronic </Button></Link></li>
                                             <li><Link to='/'> <Button>Electronic </Button></Link></li>
                                             <li><Link to='/'> <Button>Electronic </Button></Link></li>
@@ -53,7 +74,7 @@ const Navigation = () => {
                                             <li><Link to='/'> <Button>Electronic </Button></Link></li>
                                             <li><Link to='/'> <Button>Electronic </Button></Link></li>
                                             <li><Link to='/'> <Button>Electronic </Button></Link></li>
-                                        </div>
+                                        </ul>
                                     </li>
                                     <li><Link to='/'> <Button>Electronic </Button></Link></li>
                                     <li><Link to='/'> <Button>Electronic </Button></Link></li>

@@ -1411,11 +1411,6 @@ footer .footerBottom .container ul a {
   color: #71778e !important;
 }
 
-.productModel .productModelwrapper .product-wrapper>* {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
 .productModel .productModelwrapper .product-wrapper .Price {
   margin-bottom: 15px;
   font-size: 26px;

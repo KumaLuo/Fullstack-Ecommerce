@@ -461,10 +461,10 @@ const Listing = () => {
 
                         <div className="list-buttons d-flex align-items-center">
                             <div className="view-selectors d-flex align-items-center">
-                                <Button disableRipple disableTouchRipple onClick={() => { setItemView("one"); setShow(12) }} className={itemView === "one" ? "active" : ""}><PiListBold /></Button>
-                                <Button disableRipple disableTouchRipple onClick={() => { setItemView("two"); setShow(12) }} className={itemView === "two" ? "active" : ""}><BsGridFill /></Button>
-                                <Button disableRipple disableTouchRipple onClick={() => { setItemView("three"); setShow(18) }} className={itemView === "three" ? "active" : ""}><BsGrid3X3GapFill /></Button>
-                                <Button disableRipple disableTouchRipple onClick={() => { setItemView("four"); setShow(12) }} className={itemView === "four" ? "active" : ""}><TfiLayoutGrid4Alt /></Button>
+                                <Button disableRipple disableTouchRipple onClick={() => { setItemView("one"); setShow(12); setCurrentPage(1) }} className={itemView === "one" ? "active" : ""}><PiListBold /></Button>
+                                <Button disableRipple disableTouchRipple onClick={() => { setItemView("two"); setShow(12); setCurrentPage(1) }} className={itemView === "two" ? "active" : ""}><BsGridFill /></Button>
+                                <Button disableRipple disableTouchRipple onClick={() => { setItemView("three"); setShow(18); setCurrentPage(1) }} className={itemView === "three" ? "active" : ""}><BsGrid3X3GapFill /></Button>
+                                <Button disableRipple disableTouchRipple onClick={() => { setItemView("four"); setShow(12); setCurrentPage(1) }} className={itemView === "four" ? "active" : ""}><TfiLayoutGrid4Alt /></Button>
                             </div>
                             <div className="filters ml-auto d-flex align-items-center">
                                 <div className="sortby">

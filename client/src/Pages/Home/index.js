@@ -136,7 +136,7 @@ const Home = () => {
       rating: 4.5,
       oldPrice: 30,
       price: 24,
-    },]
+    }]
 
   const bannerProducts = [{
     name: "Bacola Natural Foods",

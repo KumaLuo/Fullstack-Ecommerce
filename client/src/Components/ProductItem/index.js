@@ -46,7 +46,7 @@ const ProductItem = (props) => {
                     </div>
                     <div className="productInfo">
                         <div className="productName mb-1">
-                            <Link to={`/product/${product.id}`}>{product.name}</Link>
+                            <Link to={`/products/${product.id}`}>{product.name}</Link>
                         </div>
 
                         {product.stock > 0 ? (
@@ -99,7 +99,7 @@ const ProductItem = (props) => {
                     </div>
                     <div className="productInfo">
                         <div className="productName mb-1">
-                            <Link to={`/product/${product.id}`}>{product.name}</Link>
+                            <Link to={`/products/${product.id}`}>{product.name}</Link>
                         </div>
 
                         {product.stock > 0 ? (

@@ -1,6 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import ProductHeader from '../../Components/ProductHeader';
+import ProductZoom from '../../Components/ProductZoom';
+import ProductInfo from '../../Components/ProductInfo';
+import { FaFacebookF, FaTwitter, FaPinterestP, FaLinkedinIn, FaRedditAlien, FaWhatsapp } from "react-icons/fa6";
 
 
 const ProductDetails = () => {
@@ -386,8 +389,62 @@ const ProductDetails = () => {
         <section className="productDetailsPage">
             <div className="container">
 
-                <div className="productDetails d-flex align-items-center">
+                <div className="productDetails align-items-center">
                     <ProductHeader product={products[id - 1]} />
+                    <div className='d-flex align-items-center justify-content-center'>
+                        <div className='col-12 col-lg-5'>
+                            <ProductZoom product={products[id - 1]} />
+                        </div>
+                        <div className='col-12 col-lg-7 details'>
+                            <div style={{ maxWidth: "50%" }}>
+                                <ProductInfo product={products[id - 1]} />
+                                <div className='productShare'>
+                                    <ul cliassName='list-inline align-items-center'>
+                                        <li className='list-inline-item'>
+                                            <a href=' ' target='_blank' rel="noreferrer" style={{ backgroundColor: "#3b5998" }}>
+                                                <FaFacebookF />
+                                            </a>
+                                        </li>
+                                        <li className='list-inline-item'>
+                                            <a href=' ' target='_blank' rel="noreferrer" style={{ backgroundColor: "#1da1f2" }}>
+                                                <FaTwitter />
+                                            </a>
+                                        </li>
+                                        <li className='list-inline-item'>
+                                            <a href=' ' target='_blank' rel="noreferrer" style={{ backgroundColor: "#e60023" }}>
+                                                <FaPinterestP />
+                                            </a>
+
+                                        </li>
+                                        <li className='list-inline-item'>
+                                            <a href=' ' target='_blank' rel="noreferrer" style={{ backgroundColor: "#0077b5" }}>
+                                                <FaLinkedinIn />
+                                            </a>
+
+                                        </li>
+                                        <li className='list-inline-item'>
+                                            <a href=' ' target='_blank' rel="noreferrer" style={{ backgroundColor: "#ff4500" }}>
+                                                <FaRedditAlien />
+                                            </a>
+
+                                        </li>
+                                        <li className='list-inline-item'>
+                                            <a href=' ' target='_blank' rel="noreferrer" style={{ backgroundColor: "#25D366" }}>
+                                                <FaWhatsapp />
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                            <div>
+
+                            </div>
+
+                        </div>
+                    </div>
 
                 </div>
 

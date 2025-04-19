@@ -23,7 +23,7 @@ const ProductHeader = ({ product }) => {
                         sx={{
                             fontSize: "11px",
                         }}
-                        emptyIcon={<StarIcon style={{ opacity: 0.5, color: "#ccc", fontSize: "11px" }} />}
+                        emptyIcon={<StarIcon sx={{ color: "#ccc", fontSize: "11px" }} />}
                     />
                     <span className='rating-count'>{product.reviewCount} REVIEW</span>
                 </div>

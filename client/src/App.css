@@ -1375,24 +1375,29 @@ footer .footerBottom .container ul a {
   padding: 40px;
 }
 
+.product-header {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
 .productModel .productModelwrapper .product-header {
   padding-bottom: 30px;
   margin-bottom: 30px;
   border-bottom: 1px solid #e4e5ee;
 }
 
-.productModel .productModelwrapper .product-header .product-title {
+.product-header .product-title {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 15px;
 }
 
-.productModel .productModelwrapper .product-header .product-rating {
+.product-header .product-rating {
   font-size: 12px;
 }
 
 
-.productModel .productModelwrapper .product-header .product-rating>*+div::before {
+.product-header .product-rating>*+div::before {
   content: "|";
   margin-right: 13px;
   margin-left: 15px;
@@ -1400,37 +1405,37 @@ footer .footerBottom .container ul a {
   display: inline-block;
 }
 
-.productModel .productModelwrapper .product-header .product-rating .sku,
-.productModel .productModelwrapper .product-header .product-rating .brands {
+.product-header .product-rating .sku,
+.product-header .product-rating .brands {
   color: #9b9bb4 !important;
 }
 
-.productModel .productModelwrapper .product-header .product-rating .rating-count {
+.product-header .product-rating .rating-count {
   margin-left: 8px;
   font-weight: 600;
   color: #71778e !important;
 }
 
-.productModel .productModelwrapper .product-wrapper .Price {
+.productInfo .Price {
   margin-bottom: 15px;
   font-size: 26px;
   font-weight: 600;
   line-height: 24px;
 }
 
-.productModel .productModelwrapper .product-wrapper .Price .oldPrice {
+.productInfo .Price .oldPrice {
   text-decoration: line-through;
   color: #c2c2d3 !important;
   font-size: 75%;
   font-weight: 500;
 }
 
-.productModel .productModelwrapper .product-wrapper .Price .price {
+.productInfo .Price .price {
   margin-left: 5px;
   color: #d51243 !important;
 }
 
-.productModel .productModelwrapper .product-wrapper .success {
+.productInfo .success {
   color: #00b853 !important;
   font-size: 12px;
   font-weight: 600;
@@ -1442,7 +1447,7 @@ footer .footerBottom .container ul a {
   display: inline-block;
 }
 
-.productModel .productModelwrapper .product-wrapper .description {
+.productInfo .description {
   font-size: 13px;
   color: #3e445a !important;
   line-height: 24px;
@@ -1450,11 +1455,11 @@ footer .footerBottom .container ul a {
   margin-bottom: 20px;
 }
 
-.productModel .productModelwrapper .product-wrapper .product-quantity {
+.productInfo .product-quantity {
   margin-bottom: 40px;
 }
 
-.productModel .productModelwrapper .product-wrapper .product-quantity input {
+.productInfo .product-quantity input {
   width: 2.625rem;
   height: 2.75rem;
   border: 0;
@@ -1467,8 +1472,8 @@ footer .footerBottom .container ul a {
   color: #202435 !important;
 }
 
-.productModel .productModelwrapper .product-wrapper .product-quantity .minus,
-.productModel .productModelwrapper .product-wrapper .product-quantity .plus {
+.productInfo .product-quantity .minus,
+.productInfo .product-quantity .plus {
 
   align-items: center;
   justify-content: center;
@@ -1482,19 +1487,19 @@ footer .footerBottom .container ul a {
   transition: all 0.2s ease-in-out;
 }
 
-.productModel .productModelwrapper .product-wrapper .product-quantity .minus svg,
-.productModel .productModelwrapper .product-wrapper .product-quantity .plus svg {
+.productInfo .product-quantity .minus svg,
+.productInfo .product-quantity .plus svg {
   font-size: 12px;
   color: #202435 !important;
 }
 
-.productModel .productModelwrapper .product-wrapper .product-quantity .minus:hover,
-.productModel .productModelwrapper .product-wrapper .product-quantity .plus:hover {
+.productInfo .product-quantity .minus:hover,
+.productInfo .product-quantity .plus:hover {
   background: #ffcd00 !important;
   transition: all 0.2s ease-in-out;
 }
 
-.productModel .productModelwrapper .product-wrapper .product-quantity .add-to-cart {
+.productInfo .product-quantity .add-to-cart {
   font-size: 13px;
   height: 44px;
   margin-left: 15px;
@@ -1505,16 +1510,16 @@ footer .footerBottom .container ul a {
   color: #fff !important;
 }
 
-.productModel .productModelwrapper .product-wrapper .product-quantity .add-to-cart:hover {
+.productInfo .product-quantity .add-to-cart:hover {
   opacity: 0.8 !important;
   transition: all 0.2s ease-in-out;
 }
 
-.productModel .productModelwrapper .product-wrapper .product-action {
+.productInfo .product-action {
   margin-bottom: 30px;
 }
 
-.productModel .productModelwrapper .product-wrapper .product-action .wishlist {
+.productInfo .product-action .wishlist {
   justify-content: center;
   align-items: center;
   height: 33px;
@@ -1527,16 +1532,16 @@ footer .footerBottom .container ul a {
   text-transform: uppercase !important;
 }
 
-.productModel .productModelwrapper .product-wrapper .product-action svg {
+.productInfo .product-action svg {
   font-size: 16px;
   margin-right: 5px;
 }
 
-.productModel .productModelwrapper .product-wrapper .product-action button:hover {
+.productInfo .product-action button:hover {
   background: none !important;
 }
 
-.productModel .productModelwrapper .product-wrapper .product-action .compare {
+.productInfo .product-action .compare {
   margin-left: 20px;
   align-items: center;
   font-size: 12px;
@@ -1546,46 +1551,46 @@ footer .footerBottom .container ul a {
   padding: 0;
 }
 
-.productModel .productModelwrapper .product-wrapper .checklist {
+.productInfo .checklist {
   margin-bottom: 24px;
 }
 
-.productModel .productModelwrapper .product-wrapper .checklist li {
+.productInfo .checklist li {
   list-style: none;
   align-items: center;
   font-size: 12px;
   color: #3e445a !important;
 }
 
-.productModel .productModelwrapper .product-wrapper .checklist li+li {
+.productInfo .checklist li+li {
   margin-top: 6px;
 }
 
-.productModel .productModelwrapper .product-wrapper .checklist li::before {
+.productInfo .checklist li::before {
   font-size: 11px;
   content: '\2714';
   color: #00b853 !important;
   margin-right: 10px;
 }
 
-.productModel .productModelwrapper .product-wrapper .product-tags {
+.productInfo .product-tags {
   padding-top: 24px;
   border-top: 1px solid #e4e5ee;
 }
 
-.productModel .productModelwrapper .product-wrapper .product-tags>* {
+.productInfo .product-tags>* {
   margin-top: 6px;
   color: #9b9bb4 !important;
   font-size: 12px;
 }
 
-.productModel .productModelwrapper .product-wrapper .product-tags>* a {
+.productInfo .product-tags>* a {
   color: #71778e !important;
   text-decoration: none;
   font-weight: 500;
 }
 
-.productModel .productModelwrapper .product-wrapper .product-tags>* a:not(:last-child)::after {
+.productInfo .product-tags>* a:not(:last-child)::after {
   content: ', ';
 }
 
@@ -1967,4 +1972,71 @@ footer .footerBottom .container ul a {
 .product_list_page .product_list .content_right .pagination .Mui-selected {
   background-color: #2bbef9 !important;
   color: white !important;
+}
+
+
+
+.productDetailsPage {
+  width: 100%;
+  background: #f7f8fd !important;
+}
+
+.productDetailsPage .container {
+  background: transparent !important;
+}
+
+.productDetailsPage .container .productDetails {
+  padding: 40px;
+  background: #fff !important;
+  border-radius: 7px;
+}
+
+
+.productDetailsPage .container .productDetails .details {
+  padding-left: 30px !important;
+}
+
+.productDetailsPage .container .productDetails .productShare {
+  margin-top: 40px !important;
+}
+
+.productDetailsPage .container .productDetails .productShare ul {
+  list-style: none !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.productDetailsPage .container .productDetails .productShare ul li {
+  margin: 0px;
+  padding: 0px;
+}
+
+.productDetailsPage .container .productDetails .productShare ul li+li {
+  margin-left: 5px !important;
+}
+
+.productDetailsPage .container .productDetails .productShare ul li a {
+  display: inline-flex;
+  text-decoration: none !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px !important;
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 50% !important;
+  border: 1px solid #e4e5ee;
+  transition: all 0.2s;
+}
+
+.productDetailsPage .container .productDetails .productShare ul li a:hover {
+  opacity: 0.8 !important;
+}
+
+.productDetailsPage .container .reviews {
+  margin-top: 60px !important;
+  background-color: #fff !important;
+  border: 1px solid #edeef5 !important;
+  border-radius: 7px !important;
 }

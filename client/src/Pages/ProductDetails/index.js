@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ProductHeader from '../../Components/ProductHeader';
 import ProductZoom from '../../Components/ProductZoom';
 import ProductInfo from '../../Components/ProductInfo';
 import { FaFacebookF, FaTwitter, FaPinterestP, FaLinkedinIn, FaRedditAlien, FaWhatsapp } from "react-icons/fa6";
+import { TbTruckDelivery, TbMilk } from "react-icons/tb";
+import { PiCurrencyCircleDollar } from "react-icons/pi";
 
 
 const ProductDetails = () => {
+
+    const [tab, setTab] = useState("tab-description");
+
+
+    const tabClick = (e) => {
+        e.preventDefault();
+        const tabId = e.target.getAttribute('href').replace('#', '');
+        setTab(tabId);
+    }
 
     const products = [
         {
@@ -395,7 +406,7 @@ const ProductDetails = () => {
                         <div className='col-12 col-lg-5'>
                             <ProductZoom product={products[id - 1]} />
                         </div>
-                        <div className='col-12 col-lg-7 details'>
+                        <div className='col-12 col-lg-7 details d-flex'>
                             <div style={{ maxWidth: "50%" }}>
                                 <ProductInfo product={products[id - 1]} />
                                 <div className='productShare'>
@@ -439,8 +450,21 @@ const ProductDetails = () => {
                                 </div>
                             </div>
 
-                            <div>
-
+                            <div className='iconMessage'>
+                                <ul>
+                                    <li className='d-flex align-items-center'>
+                                        <TbTruckDelivery />
+                                        <span>Free Shipping apply to all orders over $100</span>
+                                    </li>
+                                    <li className='d-flex align-items-center'>
+                                        <TbMilk />
+                                        <span>Guranteed 100% Organic from natural farmas</span>
+                                    </li>
+                                    <li className='d-flex align-items-center'>
+                                        <PiCurrencyCircleDollar />
+                                        <span>1 Day Returns if you change your mind</span>
+                                    </li>
+                                </ul>
                             </div>
 
                         </div>
@@ -449,6 +473,36 @@ const ProductDetails = () => {
                 </div>
 
                 <div className="reviews">
+                    <ul className='list-inline'>
+                        <li className='list-inline-item' id='tab-description'>
+                            <a href='#tab-description' onClick={(e) => tabClick(e)} className={tab === "tab-description" ? "active" : ""}>DESCRIPTION</a>
+                        </li>
+                        <li className='list-inline-item' id='tab-additional-information'>
+                            <a href='#tab-additional-information' onClick={(e) => tabClick(e)} className={tab === "tab-additional-information" ? "active" : ""}>ADDITIONAL INFORMATION </a>
+                        </li>
+                        <li className='list-inline-item' id='tab-reviews'>
+                            <a href='#tab-reviews' onClick={(e) => tabClick(e)} className={tab === "tab-reviews" ? "active" : ""}>REVIEWS({products[id - 1].reviewCount})</a>
+                        </li>
+
+                    </ul>
+                    {tab === "tab-description" && <div className='tab-panel'>
+                        1
+                    </div>}
+
+                    {tab === "tab-additional-information" && <div className='tab-panel'>
+                        2
+                    </div>}
+
+                    {tab === "tab-reviews" && <div className='tab-panel'>
+                        3
+                    </div>}
+                </div>
+
+                <div className="relatedProducts">
+
+                </div>
+
+                <div className='recentViewed'>
 
                 </div>
             </div>

@@ -12,6 +12,10 @@ body {
   font-size: 14px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .bg-blue {
   background-color: #233a95;
 }
@@ -2068,19 +2072,22 @@ footer .footerBottom .container ul a {
   margin-right: 20px !important;
 }
 
-.productDetailsPage .container .reviews ul {
+.productDetailsPage .container .reviews ul,
+.productDetailsPage .container .floatingTab ul {
   list-style: none !important;
   margin: 0px !important;
   padding: 0px 20px !important;
   border-bottom: 1px solid #edeef5 !important;
 }
 
-.productDetailsPage .container .reviews ul li {
+.productDetailsPage .container .reviews ul li,
+.productDetailsPage .container .floatingTab ul li {
   display: inline-flex;
   margin: 0px !important;
 }
 
-.productDetailsPage .container .reviews ul li a {
+.productDetailsPage .container .reviews ul li a,
+.productDetailsPage .container .floatingTab ul li a {
   text-decoration: none !important;
   color: #c2c2d3 !important;
   padding: 20px !important;
@@ -2088,10 +2095,28 @@ footer .footerBottom .container ul a {
   font-size: 16px !important;
 }
 
-.productDetailsPage .container .reviews ul li a.active {
+.productDetailsPage .container .reviews ul li a.active,
+.productDetailsPage .container .floatingTab ul li a.active {
   color: #2bbef9 !important;
 }
 
 .productDetailsPage .container .reviews .tab-panel {
   padding: 20px 40px !important;
+}
+
+.productDetailsPage .container .floatingTab {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: white;
+}
+
+.productDetailsPage .container .floatingTab ul li a {
+  color: #202435 !important;
+}
+
+.productDetailsPage .container .reviews ul li a.active {
+  color: #202435 !important;
 }

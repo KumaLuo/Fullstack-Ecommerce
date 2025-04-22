@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ProductHeader from '../../Components/ProductHeader';
 import ProductZoom from '../../Components/ProductZoom';
@@ -11,6 +11,23 @@ import { PiCurrencyCircleDollar } from "react-icons/pi";
 const ProductDetails = () => {
 
     const [tab, setTab] = useState("tab-description");
+    const [isFloatingTabVisible, setIsFloatingTabVisible] = useState(false);
+    const productDetailsRef = useRef(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const productDetailsTop = productDetailsRef.current?.getBoundingClientRect().top;
+
+            if (productDetailsTop <= 0) {
+                setIsFloatingTabVisible(true);
+            } else {
+                setIsFloatingTabVisible(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
 
     const tabClick = (e) => {
@@ -18,6 +35,7 @@ const ProductDetails = () => {
         const tabId = e.target.getAttribute('href').replace('#', '');
         setTab(tabId);
     }
+
 
     const products = [
         {
@@ -396,11 +414,16 @@ const ProductDetails = () => {
 
     const { id } = useParams();
 
+
     return (
         <section className="productDetailsPage">
             <div className="container">
 
-                <div className="productDetails align-items-center">
+                <div className='nav-wrapper'>
+
+                </div>
+
+                <div className="productDetails align-items-center" ref={productDetailsRef}>
                     <ProductHeader product={products[id - 1]} />
                     <div className='d-flex align-items-center justify-content-center'>
                         <div className='col-12 col-lg-5'>
@@ -472,7 +495,7 @@ const ProductDetails = () => {
 
                 </div>
 
-                <div className="reviews">
+                <div className="reviews" id='reviews'>
                     <ul className='list-inline'>
                         <li className='list-inline-item' id='tab-description'>
                             <a href='#tab-description' onClick={(e) => tabClick(e)} className={tab === "tab-description" ? "active" : ""}>DESCRIPTION</a>
@@ -498,13 +521,30 @@ const ProductDetails = () => {
                     </div>}
                 </div>
 
-                <div className="relatedProducts">
+                <div className="relatedProducts" id='relatedProducts'>
 
                 </div>
 
                 <div className='recentViewed'>
 
                 </div>
+
+                {isFloatingTabVisible && <div className='floatingTab'>
+                    <ul className='list-inline'>
+                        <li className='list-inline-item'>
+                            <a href='#reviews' className={tab === "tab-description" ? "active" : ""}>DESCRIPTION</a>
+                        </li>
+                        <li className='list-inline-item'>
+                            <a href='#reviews' className={tab === "tab-additional-information" ? "active" : ""}>ADDITIONAL INFORMATION </a>
+                        </li>
+                        <li className='list-inline-item'>
+                            <a href='#reviews' className={tab === "tab-reviews" ? "active" : ""}>REVIEWS({products[id - 1].reviewCount})</a>
+                        </li>
+                        <li className='list-inline-item'>
+                            <a href='#relatedProducts' className={tab === "relatedProducts" ? "active" : ""}>RELATED PRODUCTS</a>
+                        </li>
+                    </ul>
+                </div>}
             </div>
         </section>
     )

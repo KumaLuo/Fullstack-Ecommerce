@@ -1439,7 +1439,7 @@ footer .footerBottom .container ul a {
   color: #d51243 !important;
 }
 
-.productInfo .success {
+.productModel .productModelwrapper .productInfo .success {
   color: #00b853 !important;
   font-size: 12px;
   font-weight: 600;
@@ -1449,6 +1449,18 @@ footer .footerBottom .container ul a {
   background: #e5f8ed;
   margin-bottom: 20px;
   display: inline-block;
+}
+
+.productModel .productModelwrapper .productInfo .text-danger {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase !important;
+  padding: 4px 10px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  display: inline-block;
+  color: #d51243 !important;
+  background: #ffeef2;
 }
 
 .productInfo .description {
@@ -1998,6 +2010,30 @@ footer .footerBottom .container ul a {
 
 .productDetailsPage .container .productDetails .details {
   padding-left: 30px !important;
+}
+
+.productDetailsPage .container .productDetails .productInfo .success {
+  color: #00b853 !important;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase !important;
+  padding: 4px 10px;
+  border-radius: 30px;
+  background: #e5f8ed;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.productDetailsPage .container .productDetails .productInfo .text-danger {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase !important;
+  padding: 4px 10px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  display: inline-block;
+  color: #d51243 !important;
+  background: #ffeef2;
 }
 
 .productDetailsPage .container .productDetails .productShare {

@@ -442,7 +442,7 @@ const ProductDetails = () => {
                             <ProductZoom product={products[id - 1]} />
                         </div>
                         <div className='col-12 col-lg-7 details d-flex'>
-                            <div style={{ maxWidth: "50%" }}>
+                            <div style={{ minWidth: "50%", maxWidth: "50%" }}>
                                 <ProductInfo product={products[id - 1]} />
                                 <div className='productShare'>
                                     <ul cliassName='list-inline align-items-center'>

@@ -2156,3 +2156,8 @@ footer .footerBottom .container ul a {
 .productDetailsPage .container .reviews ul li a.active {
   color: #202435 !important;
 }
+
+.productDetailsPage .container .relatedProducts,
+.productDetailsPage .container .recentViewed {
+  background: #fff !important;
+}

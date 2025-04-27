@@ -6,6 +6,8 @@ import ProductInfo from '../../Components/ProductInfo';
 import { FaFacebookF, FaTwitter, FaPinterestP, FaLinkedinIn, FaRedditAlien, FaWhatsapp } from "react-icons/fa6";
 import { TbTruckDelivery, TbMilk } from "react-icons/tb";
 import { PiCurrencyCircleDollar } from "react-icons/pi";
+import Slider from "react-slick";
+import ProductItem from '../../Components/ProductItem';
 
 
 const ProductDetails = () => {
@@ -426,6 +428,15 @@ const ProductDetails = () => {
 
     const { id } = useParams();
 
+    var productSliderOptions = {
+        dots: false,
+        arrows: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1
+    };
+
 
     return (
         <section className="productDetailsPage">
@@ -534,11 +545,19 @@ const ProductDetails = () => {
                 </div>
 
                 <div className="relatedProducts" id='relatedProducts'>
-
+                    <Slider {...productSliderOptions}>
+                        {products.map((product) => (
+                            <ProductItem key={product.id} product={product} />
+                        ))}
+                    </Slider>
                 </div>
 
                 <div className='recentViewed'>
-
+                    <Slider {...productSliderOptions}>
+                        {products.map((product) => (
+                            <ProductItem key={product.id} product={product} />
+                        ))}
+                    </Slider>
                 </div>
 
                 {isFloatingTabVisible && <div className='floatingTab' ref={floatingTabRef}>

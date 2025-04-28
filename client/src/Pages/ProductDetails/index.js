@@ -545,19 +545,25 @@ const ProductDetails = () => {
                 </div>
 
                 <div className="relatedProducts" id='relatedProducts'>
-                    <Slider {...productSliderOptions}>
-                        {products.map((product) => (
-                            <ProductItem key={product.id} product={product} />
-                        ))}
-                    </Slider>
+                    <h3>RELATED PRODUCTS</h3>
+                    <div className='slide-container'>
+                        <Slider {...productSliderOptions}>
+                            {products.map((product) => (
+                                <ProductItem key={product.id} product={product} />
+                            ))}
+                        </Slider>
+                    </div>
                 </div>
 
                 <div className='recentViewed'>
-                    <Slider {...productSliderOptions}>
-                        {products.map((product) => (
-                            <ProductItem key={product.id} product={product} />
-                        ))}
-                    </Slider>
+                    <h3>RECENTLY VIEWED PRODUCTS</h3>
+                    <div className='slide-container'>
+                        <Slider {...productSliderOptions}>
+                            {products.map((product) => (
+                                <ProductItem key={product.id} product={product} />
+                            ))}
+                        </Slider>
+                    </div>
                 </div>
 
                 {isFloatingTabVisible && <div className='floatingTab' ref={floatingTabRef}>

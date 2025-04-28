@@ -2159,5 +2159,23 @@ footer .footerBottom .container ul a {
 
 .productDetailsPage .container .relatedProducts,
 .productDetailsPage .container .recentViewed {
+  margin-top: 30px !important;
+}
+
+.productDetailsPage .container .slide-container {
   background: #fff !important;
+  border: 1px solid #edeef5 !important;
+  border-radius: 7px !important;
+}
+
+.productDetailsPage .container .slide-container .slick-slide {
+  border-left: 1px solid #edeef5 !important;
+}
+
+.productDetailsPage .container .relatedProducts h3,
+.productDetailsPage .container .recentViewed h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px !important;
+  letter-spacing: 0;
 }

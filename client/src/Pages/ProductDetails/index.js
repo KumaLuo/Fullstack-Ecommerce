@@ -13,6 +13,7 @@ import ProductItem from '../../Components/ProductItem';
 const ProductDetails = () => {
 
     const [tab, setTab] = useState("tab-description");
+    const [floatingTab, setFloatingTab] = useState();
     const [isFloatingTabVisible, setIsFloatingTabVisible] = useState(false);
     const productDetailsRef = useRef(null);
     const floatingTabRef = useRef(null);
@@ -37,6 +38,7 @@ const ProductDetails = () => {
         e.preventDefault();
         const tabId = e.target.getAttribute('href').replace('#', '');
         setTab(tabId);
+        setFloatingTab();
     }
 
     const scrollToWithFloatingOffset = (e, id) => {
@@ -573,31 +575,35 @@ const ProductDetails = () => {
                                 onClick={(e) => {
                                     scrollToWithFloatingOffset(e, '#reviews');
                                     setTab("tab-description");
+                                    setFloatingTab("tab-description");
                                 }}
-                                className={tab === "tab-description" ? "active" : ""}>DESCRIPTION</a>
+                                className={floatingTab === "tab-description" ? "active" : ""}>DESCRIPTION</a>
                         </li>
                         <li className='list-inline-item'>
                             <a href='#reviews'
                                 onClick={(e) => {
                                     scrollToWithFloatingOffset(e, '#reviews');
                                     setTab("tab-additional-information");
+                                    setFloatingTab("tab-additional-information");
                                 }}
-                                className={tab === "tab-additional-information" ? "active" : ""}>ADDITIONAL INFORMATION </a>
+                                className={floatingTab === "tab-additional-information" ? "active" : ""}>ADDITIONAL INFORMATION </a>
                         </li>
                         <li className='list-inline-item'>
                             <a href='#reviews'
                                 onClick={(e) => {
                                     scrollToWithFloatingOffset(e, '#reviews');
                                     setTab("tab-reviews");
+                                    setFloatingTab("tab-reviews");
                                 }}
-                                className={tab === "tab-reviews" ? "active" : ""}>REVIEWS({products[id - 1].reviewCount})</a>
+                                className={floatingTab === "tab-reviews" ? "active" : ""}>REVIEWS({products[id - 1].reviewCount})</a>
                         </li>
                         <li className='list-inline-item'>
                             <a href='#relatedProducts'
                                 onClick={(e) => {
                                     scrollToWithFloatingOffset(e, '#relatedProducts');
+                                    setFloatingTab("relatedProducts");
                                 }}
-                                className={tab === "relatedProducts" ? "active" : ""}>RELATED PRODUCTS</a>
+                                className={floatingTab === "relatedProducts" ? "active" : ""}>RELATED PRODUCTS</a>
                         </li>
                     </ul>
                 </div>}

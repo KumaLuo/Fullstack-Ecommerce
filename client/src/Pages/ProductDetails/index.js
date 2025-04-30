@@ -573,7 +573,34 @@ const ProductDetails = () => {
                     </div>}
 
                     {tab === "tab-additional-information" && <div className='tab-panel additional-information'>
-                        2
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Weight</th>
+                                    <td>1.5 kg</td>
+                                </tr>
+                                <tr>
+                                    <th>Dimensions</th>
+                                    <td>10 × 10 × 15 cm</td>
+                                </tr>
+                                <tr>
+                                    <th>Brand</th>
+                                    <td>Welch's</td>
+                                </tr>
+                                <tr>
+                                    <th>SKU</th>
+                                    <td>ZU49VOR</td>
+                                </tr>
+                                <tr>
+                                    <th>Type</th>
+                                    <td>Organic</td>
+                                </tr>
+                                <tr>
+                                    <th>MFG</th>
+                                    <td>Jun 04.2025</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>}
 
                     {tab === "tab-reviews" && <div className='tab-panel reviews'>

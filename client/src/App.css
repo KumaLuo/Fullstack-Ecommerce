@@ -2213,3 +2213,17 @@ footer .footerBottom .container ul a {
   flex: 0 0 165px;
   display: inline-block;
 }
+
+.productDetailsPage .container .reviews .additional-information table {
+  width: 100%;
+  border-collapse: collapse;
+  vertical-align: middle;
+  font-size: 15px;
+}
+
+.productDetailsPage .container .reviews .additional-information table th,
+.productDetailsPage .container .reviews .additional-information table td {
+  padding: 10px 20px;
+  border: 1px solid #ececec;
+  vertical-align: middle;
+}

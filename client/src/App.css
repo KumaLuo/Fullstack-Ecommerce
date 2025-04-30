@@ -2179,3 +2179,37 @@ footer .footerBottom .container ul a {
   margin-bottom: 15px !important;
   letter-spacing: 0;
 }
+
+.productDetailsPage .container .reviews .description {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-top: 0px !important;
+  margin-bottom: 16px !important;
+}
+
+.productDetailsPage .container .reviews .description ul {
+  margin-top: 30px !important;
+  padding: 0 0 0 14px !important;
+}
+
+.productDetailsPage .container .reviews .description ul li {
+  display: flex !important;
+  margin: 0 0 10px !important;
+  position: relative !important;
+}
+
+.productDetailsPage .container .reviews .description ul li::before {
+  position: absolute;
+  left: -14px;
+  top: 11px;
+  content: "";
+  height: 6px;
+  width: 6px;
+  border-radius: 100%;
+  background: #000 !important;
+}
+
+.productDetailsPage .container .reviews .description ul li span {
+  flex: 0 0 165px;
+  display: inline-block;
+}

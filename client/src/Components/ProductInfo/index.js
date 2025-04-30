@@ -3,6 +3,7 @@ import { FaMinus, FaPlus, FaHeart, FaRegHeart } from "react-icons/fa";
 import { TbArrowsUpDown } from "react-icons/tb";
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
+// import { Tooltip } from '@mui/material';
 
 
 const ProductInfo = ({ product }) => {
@@ -48,6 +49,7 @@ const ProductInfo = ({ product }) => {
             </div>
 
             <div className='product-action align-items-center d-flex'>
+                {/* can use tooltips to show the user what the button does */}
                 {inWhishlist ? <Button className='wishlist' onClick={handleWhishlist}><FaHeart />Remove from Wishlist</Button>
                     : <Button className='wishlist' onClick={handleWhishlist}><FaRegHeart />Add to Wishlist</Button>}
                 <Button className='compare'><TbArrowsUpDown />Compare</Button>

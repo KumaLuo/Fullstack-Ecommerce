@@ -2227,3 +2227,74 @@ footer .footerBottom .container ul a {
   border: 1px solid #ececec;
   vertical-align: middle;
 }
+
+
+
+
+.cartPage .cartwrapper .emptyCart {
+  margin-top: 70px;
+  margin-bottom: 40px;
+  max-width: 760px;
+}
+
+.cartPage .cartwrapper .emptyCart .emptyCartIcon {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 160px;
+  height: 160px;
+  margin-bottom: 30px;
+  position: relative;
+  text-align: center;
+  border-radius: 50%;
+  background: #eaecef;
+  overflow: hidden;
+}
+
+.cartPage .cartwrapper .emptyCart .emptyCartIcon svg {
+  width: 80px;
+}
+
+.cartPage .cartwrapper .emptyCart .emptyCartIcon .c-01 {
+  fill: #b7343e;
+}
+
+.cartPage .cartwrapper .emptyCart .emptyCartIcon .c-02,
+.cartPage .cartwrapper .emptyCart .emptyCartIcon .c-03 {
+  fill: #f04652;
+}
+
+.cartPage .cartwrapper .emptyCart .emptyCartIcon .c-04 {
+  fill: #ab212b;
+}
+
+.cartPage .cartwrapper .emptyCart .emptyCartIcon .c-05,
+.cartPage .cartwrapper .emptyCart .emptyCartIcon .c-06 {
+  fill: #c13942;
+}
+
+.cartPage .cartwrapper .emptyCart .emptyCartText {
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  color: #ed174a !important;
+}
+
+.cartPage .cartwrapper .emptyCart .return-to-shop {
+  margin-top: 30px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  height: 50px;
+  border-radius: 30px !important;
+  padding-left: 36px !important;
+  padding-right: 36px !important;
+  background-color: #2bbef9 !important;
+  border-color: #2bbef9 !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.cartPage .cartwrapper .emptyCart .return-to-shop:hover {
+  opacity: 0.8 !important;
+  transition: all 0.2s ease-in-out;
+}

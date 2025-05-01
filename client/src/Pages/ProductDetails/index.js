@@ -444,9 +444,7 @@ const ProductDetails = () => {
         <section className="productDetailsPage">
             <div className="container">
 
-                <div className='nav-wrapper'>
-
-                </div>
+                <nav></nav>
 
                 <div className="productDetails align-items-center" ref={productDetailsRef}>
                     <ProductHeader product={products[id - 1]} />

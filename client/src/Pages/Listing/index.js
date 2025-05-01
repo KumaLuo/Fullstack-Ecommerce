@@ -442,10 +442,9 @@ const Listing = () => {
     return (
         <section className="product_list_page">
             <div className="container">
+                <nav></nav>
                 <div className="product_list d-flex">
-
                     <Sidebar />
-
                     <div className="content_right">
                         <div className="right_banner w-100">
                             <Link to="/">

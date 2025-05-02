@@ -2298,3 +2298,37 @@ footer .footerBottom .container ul a {
   opacity: 0.8 !important;
   transition: all 0.2s ease-in-out;
 }
+
+.cartPage .cartwrapper .contain-items {
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.cartPage .cartwrapper .contain-items h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #253D4E !important;
+}
+
+.cartPage .cartwrapper .contain-items p {
+  font-size: 16px;
+  font-weight: 700;
+  color: #7e7e7e !important;
+  margin: 0px;
+}
+
+.cartPage .cartwrapper .contain-items .clearall button {
+  padding: 0px !important;
+  font-size: 16px;
+  font-weight: 700;
+  color: #7e7e7e !important;
+  text-transform: none !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.cartPage .cartwrapper .contain-items .clearall button svg {
+  font-size: 16px;
+  margin-right: 3px;
+}

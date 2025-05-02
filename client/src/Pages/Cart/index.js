@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import { GoTrash } from "react-icons/go";
 
 const Cart = () => {
     return (
@@ -8,7 +10,7 @@ const Cart = () => {
                 <nav></nav>
 
                 <div className="cartwrapper w-100 align-items-center d-flex flex-column">
-                    <div className="emptyCart align-items-center text-center">
+                    {/* <div className="emptyCart align-items-center text-center">
                         <div className="emptyCartIcon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox='0 0 280.028 280.028' width="280.028" height="80.028">
                                 <path className='c-01' d="M35.004 0h210.02v78.758H35.004V0z" fill="#d07c40"></path>
@@ -31,6 +33,20 @@ const Cart = () => {
                             </button>
                         </Link>
 
+                    </div> */}
+                    <div className='contain-items w-100'>
+                        <div className='header-text col-lg-8'>
+                            <h2 className='hd'>Your Cart</h2>
+                            <div className='clearall d-flex align-items-center'>
+                                <p>There are <b>3</b> products in your cart</p>
+                                <Button className='ml-auto' disableRipple={true}><GoTrash /> Clear Cart</Button>
+
+                            </div>
+                        </div>
+
+                        <div className='cart-items'>
+
+                        </div>
                     </div>
                 </div>
             </div>

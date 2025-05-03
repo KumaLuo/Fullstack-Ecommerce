@@ -2237,6 +2237,24 @@ footer .footerBottom .container ul a {
   max-width: 760px;
 }
 
+.c-01 {
+  fill: #b7343e;
+}
+
+.c-02,
+.c-03 {
+  fill: #f04652;
+}
+
+.emptyCartIcon .c-04 {
+  fill: #ab212b;
+}
+
+.emptyCartIcon .c-05,
+.emptyCartIcon .c-06 {
+  fill: #c13942;
+}
+
 .cartPage .cartwrapper .emptyCart .emptyCartIcon {
   display: inline-flex;
   align-items: flex-end;
@@ -2253,24 +2271,6 @@ footer .footerBottom .container ul a {
 
 .cartPage .cartwrapper .emptyCart .emptyCartIcon svg {
   width: 80px;
-}
-
-.cartPage .cartwrapper .emptyCart .emptyCartIcon .c-01 {
-  fill: #b7343e;
-}
-
-.cartPage .cartwrapper .emptyCart .emptyCartIcon .c-02,
-.cartPage .cartwrapper .emptyCart .emptyCartIcon .c-03 {
-  fill: #f04652;
-}
-
-.cartPage .cartwrapper .emptyCart .emptyCartIcon .c-04 {
-  fill: #ab212b;
-}
-
-.cartPage .cartwrapper .emptyCart .emptyCartIcon .c-05,
-.cartPage .cartwrapper .emptyCart .emptyCartIcon .c-06 {
-  fill: #c13942;
 }
 
 .cartPage .cartwrapper .emptyCart .emptyCartText {
@@ -2331,4 +2331,62 @@ footer .footerBottom .container ul a {
 .cartPage .cartwrapper .contain-items .clearall button svg {
   font-size: 16px;
   margin-right: 3px;
+}
+
+
+
+.floating-cart {
+  position: absolute;
+  min-width: 18.75rem;
+  max-width: 20rem;
+  top: 100%;
+  right: 0;
+  z-index: 100;
+  padding-top: .625rem;
+  pointer-events: none;
+  will-change: transform, opacity;
+  transition: all 0.25s cubic-bezier(0.17, 0.62, 0.44, 0.99);
+}
+
+.floating-cart .dropdown-wrapper {
+  padding: 1.25rem;
+  background-color: #fff;
+  box-shadow: 0px 5px 10px rgba(62, 68, 90, 0.1);
+  border: 1px solid #edeef5;
+  border-radius: 7px;
+}
+
+.floating-cart .dropdown-wrapper .cart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.floating-cart .dropdown-wrapper .emptyCartIcon {
+  position: relative;
+  text-align: center;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  background-color: #eaecef;
+  overflow: hidden;
+}
+
+.floating-cart .dropdown-wrapper .emptyCartIcon svg {
+  width: 44px;
+}
+
+.floating-cart .dropdown-wrapper .cart-empty .emptyCartText {
+  font-size: .8125rem;
+  font-weight: 600;
+  margin-top: .9375rem;
+}
+
+.floating-cart .dropdown-wrapper .cart-notice {
+  font-size: .75rem;
+  text-align: center;
+  padding-top: 1.25rem;
+  border-top: 1px solid #edeef5;
 }

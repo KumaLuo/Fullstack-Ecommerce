@@ -10,6 +10,7 @@ import { MyContext } from '../../App';
 import Navigation from '../Navigation';
 import Switchers from './Switchers';
 import SwiperTextBanner from './SwiperTextBanner';
+import FloatingCart from '../FloatingCart';
 
 
 const Header = () => {
@@ -78,6 +79,7 @@ const Header = () => {
                                         <div className="position-relative ml-3">
                                             <Button className='user-icon'><IoBagOutline /></Button>
                                             <span className="count d-flex align-items-center justify-content-center">0</span>
+                                            <FloatingCart />
                                         </div>
                                     </div>
 

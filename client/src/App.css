@@ -340,10 +340,17 @@ header .part3 .user-icon svg {
   font-size: 18px;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
 }
 
 .cartTab button {
   background: #fff1ee !important;
+}
+
+.cartTab:hover .floating-cart {
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
 .cartTab button svg {
@@ -2343,9 +2350,11 @@ footer .footerBottom .container ul a {
   right: 0;
   z-index: 100;
   padding-top: .625rem;
-  pointer-events: none;
   will-change: transform, opacity;
   transition: all 0.25s cubic-bezier(0.17, 0.62, 0.44, 0.99);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .floating-cart .dropdown-wrapper {
@@ -2383,6 +2392,49 @@ footer .footerBottom .container ul a {
   font-weight: 600;
   margin-top: .9375rem;
 }
+
+.floating-cart .dropdown-wrapper .cart-content .buttons {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.floating-cart .dropdown-wrapper .cart-content .buttons .btn {
+  display: inline-flex;
+  font-size: .8125rem;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #3e445a;
+  text-decoration: none;
+  height: 2.75rem;
+  background-color: transparent;
+  border-color: #d9d9e9;
+  padding: 0 20px;
+}
+
+.floating-cart .dropdown-wrapper .cart-content .buttons .btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.floating-cart .dropdown-wrapper .cart-content .buttons .checkout {
+  margin-top: 5px;
+  color: #fff !important;
+  background-color: #ed174a !important;
+  border-color: #ed174a !important;
+}
+
+.floating-cart .dropdown-wrapper .cart-content .buttons .checkout:hover {
+  opacity: 0.8 !important;
+  transition: all 0.2s ease-in-out;
+}
+
+
+
+
 
 .floating-cart .dropdown-wrapper .cart-notice {
   font-size: .75rem;

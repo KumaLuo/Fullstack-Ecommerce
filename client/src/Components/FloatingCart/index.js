@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import EmptyCartIcon from '../EmptyCartIcon';
 
 const FloatingCart = () => {
@@ -12,6 +13,20 @@ const FloatingCart = () => {
                     </div>
 
                 </div>
+
+                <div className="cart-content">
+                    <div className='buttons d-flex flex-column'>
+                        <Link to="/cart" className="btn view-cart btn-primary">
+                            View Cart
+                        </Link>
+                        <Link to="/checkout" className="btn checkout btn-primary">
+                            Checkout
+                        </Link>
+
+                    </div>
+                </div>
+
+
 
                 <div className="cart-notice">
                     We reduce shipping prices to only $2.49!

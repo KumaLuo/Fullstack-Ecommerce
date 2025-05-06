@@ -15,6 +15,14 @@ const FloatingCart = () => {
                 </div>
 
                 <div className="cart-content">
+
+                    <div className='total d-flex align-items-center justify-content-space-between'>
+                        <strong>Total:</strong>
+                        <span className="total-price ml-auto">
+                            $0.00
+                        </span>
+                    </div>
+
                     <div className='buttons d-flex flex-column'>
                         <Link to="/cart" className="btn view-cart btn-primary">
                             View Cart

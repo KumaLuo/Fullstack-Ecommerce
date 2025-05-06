@@ -2393,6 +2393,25 @@ footer .footerBottom .container ul a {
   margin-top: .9375rem;
 }
 
+.floating-cart .dropdown-wrapper .cart-content .total {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  padding-top: 20px;
+  border-top: 1px solid #edeef5;
+}
+
+.floating-cart .dropdown-wrapper .cart-content .total strong {
+  font-size: 15px;
+  font-weight: 600;
+  color: #c2c2d3 !important;
+}
+
+.floating-cart .dropdown-wrapper .cart-content .total span {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #d51243 !important;
+}
+
 .floating-cart .dropdown-wrapper .cart-content .buttons {
   margin-top: 0;
   margin-bottom: 1rem;

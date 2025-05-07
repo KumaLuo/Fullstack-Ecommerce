@@ -17,6 +17,18 @@ const Header = () => {
 
     const context = useContext(MyContext);
 
+    const cartItems = context.cartItems;
+
+    const totalPrice = cartItems.reduce((acc, item) => {
+        return acc + item.price * item.quantity;
+    }
+        , 0);
+
+    const totalItems = cartItems.reduce((acc, item) => {
+        return acc + item.quantity;
+    }
+        , 0);
+
     return (
         <>
             <div className="headerwrapper">
@@ -75,10 +87,10 @@ const Header = () => {
                                     <Button className='user-icon mr-3'><FiUser /></Button>
 
                                     <div className="cartTab ml-auto d-flex align-items-center">
-                                        <span className='price'>$0.00</span>
+                                        <span className='price'>${totalPrice.toFixed(2)}</span>
                                         <div className="position-relative ml-3">
                                             <Button className='user-icon'><IoBagOutline /></Button>
-                                            <span className="count d-flex align-items-center justify-content-center">0</span>
+                                            <span className="count d-flex align-items-center justify-content-center">{totalItems}</span>
                                             <FloatingCart />
                                         </div>
                                     </div>

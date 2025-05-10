@@ -2401,9 +2401,17 @@ footer .footerBottom .container ul a {
   border-top: 1px solid #edeef5;
 }
 
+.floating-cart .dropdown-wrapper .cart-content .cart-item .cart-item-details {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 70%;
+  min-width: 0px;
+}
+
 .floating-cart .dropdown-wrapper .cart-content .cart-item .cart-item-details a {
   text-decoration: none !important;
   color: #202435 !important;
+  width: 100%;
 }
 
 .floating-cart .dropdown-wrapper .cart-content .cart-item .cart-item-details p {
@@ -2414,6 +2422,20 @@ footer .footerBottom .container ul a {
   font-size: 14px;
   font-weight: 600;
   color: #d51243 !important;
+}
+
+
+
+.floating-cart .dropdown-wrapper .cart-content .cart-item button {
+  padding: 0px !important;
+  background: transparent !important;
+  border: none !important;
+  min-width: 0 !important;
+}
+
+.floating-cart .dropdown-wrapper .cart-content .cart-item button svg {
+  font-size: 14px;
+  color: #202435 !important;
 }
 
 .floating-cart .dropdown-wrapper .cart-content .total {

@@ -72,9 +72,48 @@ function App() {
       quantity: 4,
     },
   ];
+
+  const [cart, setCart] = useState(cartItems);
+
+  const addToCart = (item) => {
+    const existingItem = cart.find(cartItem => cartItem.id === item.id);
+    if (existingItem) {
+      setCart(cart.map(cartItem => cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem));
+    } else {
+      setCart([...cart, { ...item, quantity: 1 }]);
+    }
+  }
+  const removeFromCart = (item) => {
+    const existingItem = cart.find(cartItem => cartItem.id === item.id);
+    if (existingItem) {
+      if (existingItem.quantity > 1) {
+        setCart(cart.map(cartItem => cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity - 1 } : cartItem));
+      } else {
+        setCart(cart.filter(cartItem => cartItem.id !== item.id));
+      }
+    }
+  }
+  const clearCartItem = (item) => {
+    const existingItem = cart.find(cartItem => cartItem.id === item.id);
+    if (existingItem) {
+      setCart(cart.filter(cartItem => cartItem.id !== item.id));
+    }
+  }
+
+  const clearCart = () => {
+    setCart([]);
+  }
+
+  const cartValues = {
+    cart,
+    addToCart,
+    removeFromCart,
+    clearCart,
+    clearCartItem
+  }
   return (
     <BrowserRouter>
-      <MyContext.Provider value={{ values, cartItems }}>
+      <MyContext.Provider value={{ values, cartValues }}>
         <Header />
 
         <Routes>

@@ -17,7 +17,7 @@ const Header = () => {
 
     const context = useContext(MyContext);
 
-    const cartItems = context.cartItems;
+    const cartItems = context.cartValues.cart;
 
     const totalPrice = cartItems.reduce((acc, item) => {
         return acc + item.price * item.quantity;

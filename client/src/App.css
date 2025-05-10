@@ -12,10 +12,6 @@ body {
   font-size: 14px;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .bg-blue {
   background-color: #233a95;
 }

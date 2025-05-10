@@ -19,6 +19,8 @@ const ProductDetails = () => {
     const floatingTabRef = useRef(null);
 
     useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+
         const handleScroll = () => {
             const productDetailsTop = productDetailsRef.current?.getBoundingClientRect().top;
 

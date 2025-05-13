@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import { GoTrash } from "react-icons/go";
 import EmptyCartIcon from '../../Components/EmptyCartIcon';
 
 const Cart = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }
+        , []);
+
+
     return (
         <section className="cartPage">
             <div className="container">

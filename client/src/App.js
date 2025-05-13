@@ -83,6 +83,7 @@ function App() {
       setCart([...cart, { ...item, quantity: 1 }]);
     }
   }
+
   const removeFromCart = (item) => {
     const existingItem = cart.find(cartItem => cartItem.id === item.id);
     if (existingItem) {
@@ -104,12 +105,23 @@ function App() {
     setCart([]);
   }
 
+  const hasCartItem = (item) => {
+    return cart.some(cartItem => cartItem.id === item.id);
+  }
+
+  const getCartItemQuantity = (item) => {
+    const existingItem = cart.find(cartItem => cartItem.id === item.id);
+    return existingItem ? existingItem.quantity : 0;
+  }
+
   const cartValues = {
     cart,
     addToCart,
     removeFromCart,
     clearCart,
-    clearCartItem
+    clearCartItem,
+    hasCartItem,
+    getCartItemQuantity,
   }
   return (
     <BrowserRouter>

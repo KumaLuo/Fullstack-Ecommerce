@@ -1,4 +1,5 @@
-import { React, useState } from 'react';
+import { React, useContext, useState } from 'react';
+import { MyContext } from '../../App';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Rating from '@mui/material/Rating';
@@ -8,6 +9,8 @@ import ProductModel from './ProductModel';
 
 
 const ProductItem = (props) => {
+
+    const context = useContext(MyContext);
 
     const product = props.product;
 
@@ -71,10 +74,18 @@ const ProductItem = (props) => {
                         </div>
 
                         {product.stock > 0 ? (
-                            <Button className="addToCartBtn mt-2 w-100">Add to Cart</Button>
+                            context.cartValues.hasCartItem(product) ? (
+                                <div className="d-flex align-items-center flex-row">
+                                    <Button className="minus" onClick={context.cartValues.removeFromCart.bind(this, product)}>-</Button>
+                                    <input type="text" min="1" max={product.stock} defaultValue="1" readOnly value={context.cartValues.getCartItemQuantity(product)} />
+                                    <Button className="plus" onClick={context.cartValues.addToCart.bind(this, product)}>+</Button>
+                                </div>
+                            ) : (
+                                <Button className="addToCartBtn mt-2 w-100" onClick={context.cartValues.addToCart.bind(this, product)}>Add to Cart</Button>)
                         ) : (
                             <Link to="" className='readmore'><Button className="addToCartBtn mt-2 w-100">Read More</Button></Link>
                         )}
+
                     </div>
                 </div>
             ) : (
@@ -124,7 +135,14 @@ const ProductItem = (props) => {
                         </div>
 
                         {product.stock > 0 ? (
-                            <Button className="addToCartBtn mt-2 w-100">Add to Cart</Button>
+                            context.cartValues.hasCartItem(product) ? (
+                                <div className="d-flex align-items-center flex-row">
+                                    <Button className="minus" onClick={context.cartValues.removeFromCart.bind(this, product)}>-</Button>
+                                    <input type="text" min="1" max={product.stock} defaultValue="1" readOnly value={context.cartValues.getCartItemQuantity(product)} />
+                                    <Button className="plus" onClick={context.cartValues.addToCart.bind(this, product)}>+</Button>
+                                </div>
+                            ) : (
+                                <Button className="addToCartBtn mt-2 w-100" onClick={context.cartValues.addToCart.bind(this, product)}>Add to Cart</Button>)
                         ) : (
                             <Link to="" className='readmore'><Button className="addToCartBtn mt-2 w-100">Read More</Button></Link>
                         )}

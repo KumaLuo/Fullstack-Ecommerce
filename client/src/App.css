@@ -890,6 +890,20 @@ nav .navPart2 ul li .subMenu a button {
   color: #fff !important;
 }
 
+.productItem .productInfo .cart-count {
+  margin-top: 8px;
+}
+
+.productItem .productInfo .cart-count button {
+  min-width: 0px !important;
+}
+
+.productItem .productInfo .cart-count input {
+  border: 1px transparent !important;
+  min-width: 0px !important;
+  text-align: center;
+}
+
 .productSlider .slick-arrow {
   position: absolute;
   top: 40%;

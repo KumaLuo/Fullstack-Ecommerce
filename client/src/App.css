@@ -881,7 +881,7 @@ nav .navPart2 ul li .subMenu a button {
   background: transparent !important;
   color: #2bbef9 !important;
   border: 1px solid #2bbef9 !important;
-  border-radius: 30px !important;
+  border-radius: 30px;
   text-transform: capitalize !important;
 }
 
@@ -896,12 +896,37 @@ nav .navPart2 ul li .subMenu a button {
 
 .productItem .productInfo .cart-count button {
   min-width: 0px !important;
+  height: 34px !important;
+  width: 34px !important;
+}
+
+.productItem .productInfo .cart-count .minus {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  background-color: #edeef5 !important;
+  color: #000 !important;
+  border-radius: 50%;
+  border: 1px transparent !important;
+  font-size: 20px;
+}
+
+.productItem .productInfo .cart-count .plus {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  background-color: #ffcd00 !important;
+  color: #000 !important;
+  border-radius: 50%;
+  border: 1px transparent !important;
 }
 
 .productItem .productInfo .cart-count input {
-  border: 1px transparent !important;
+  border: 1px transparent;
+  border-top: 1px solid #edeef5 !important;
+  border-bottom: 1px solid #edeef5 !important;
   min-width: 0px !important;
-  text-align: center;
+  height: 34px !important;
+  text-align: center !important;
+  pointer-events: none !important;
 }
 
 .productSlider .slick-arrow {

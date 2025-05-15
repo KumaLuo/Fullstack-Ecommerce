@@ -75,7 +75,7 @@ const ProductItem = (props) => {
 
                         {product.stock > 0 ? (
                             context.cartValues.hasCartItem(product) ? (
-                                <div className="d-flex align-items-center flex-row">
+                                <div className="cart-count d-flex align-items-center flex-row">
                                     <Button className="minus" onClick={context.cartValues.removeFromCart.bind(this, product)}>-</Button>
                                     <input type="text" min="1" max={product.stock} defaultValue="1" readOnly value={context.cartValues.getCartItemQuantity(product)} />
                                     <Button className="plus" onClick={context.cartValues.addToCart.bind(this, product)}>+</Button>

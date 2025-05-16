@@ -32,50 +32,15 @@ function App() {
   const [location, setLocation] = useState('Australia');
 
   const values = { locationList, location, setLocation };
-  const cartItems = [
-    {
-      id: 1,
-      name: "All Natural Italian-Style Chicken Meatballs",
-      image: ["https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62.jpg",
-        "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image2-47.jpg",
-        "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image3-35.jpg"
-      ],
-      price: 7.25,
-      quantity: 1,
-    },
-    {
-      id: 2,
-      name: "Field Roast Chao Cheese Creamy Original",
-      image: ["https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-46.jpg",
-        "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-46.jpg"
-      ],
-      price: 19.5,
-      quantity: 2,
-    },
-    {
-      id: 3,
-      name: "Blue Diamond Almonds Lightly Salted",
-      image: ["https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-59.jpg",
-        "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image3-33.jpg"
-      ],
-      price: 10.58,
-      quantity: 3,
-    },
-    {
-      id: 4,
-      name: "Nestle Original Coffee-Mate Coffee Creamer",
-      image: ["https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-32.jpg",
-        "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image2-27.jpg",
-        "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image4-1.jpg"
-      ],
-      price: 11.99,
-      quantity: 4,
-    },
-  ];
 
-  const [cart, setCart] = useState(cartItems);
+
+  const [cart, setCart] = useState([]);
 
   const addToCart = (item) => {
+    if (cart.length === 0) {
+      setCart([{ ...item, quantity: 1 }]);
+      return;
+    }
     const existingItem = cart.find(cartItem => cartItem.id === item.id);
     if (existingItem) {
       setCart(cart.map(cartItem => cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem));
@@ -85,6 +50,9 @@ function App() {
   }
 
   const removeFromCart = (item) => {
+    if (cart.length === 0) {
+      return;
+    }
     const existingItem = cart.find(cartItem => cartItem.id === item.id);
     if (existingItem) {
       if (existingItem.quantity > 1) {
@@ -95,6 +63,9 @@ function App() {
     }
   }
   const clearCartItem = (item) => {
+    if (cart.length === 0) {
+      return;
+    }
     const existingItem = cart.find(cartItem => cartItem.id === item.id);
     if (existingItem) {
       setCart(cart.filter(cartItem => cartItem.id !== item.id));
@@ -106,10 +77,16 @@ function App() {
   }
 
   const hasCartItem = (item) => {
+    if (cart.length === 0) {
+      return false;
+    }
     return cart.some(cartItem => cartItem.id === item.id);
   }
 
   const getCartItemQuantity = (item) => {
+    if (cart.length === 0) {
+      return 0;
+    }
     const existingItem = cart.find(cartItem => cartItem.id === item.id);
     return existingItem ? existingItem.quantity : 0;
   }

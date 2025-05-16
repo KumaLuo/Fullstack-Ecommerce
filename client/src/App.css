@@ -2343,7 +2343,7 @@ footer .footerBottom .container ul a {
 
 .cartPage .cartwrapper .contain-items {
   margin-top: 50px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .cartPage .cartwrapper .contain-items h2 {
@@ -2360,6 +2360,11 @@ footer .footerBottom .container ul a {
   margin: 0px;
 }
 
+.cartPage .cartwrapper .contain-items .clearall b {
+  color: #2bbef9 !important;
+  font-weight: bold;
+}
+
 .cartPage .cartwrapper .contain-items .clearall button {
   padding: 0px !important;
   font-size: 16px;
@@ -2374,6 +2379,26 @@ footer .footerBottom .container ul a {
   font-size: 16px;
   margin-right: 3px;
 }
+
+.cartPage .cartwrapper .contain-items .free-shipping {
+  padding: 20px !important;
+  border: 1px solid #edeef5 !important;
+  border-radius: 7px !important;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.cartPage .cartwrapper .contain-items .free-shipping .free-shipping-notice {
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+.cartPage .cartwrapper .contain-items .free-shipping .free-shipping-notice span {
+  font-weight: 600;
+  color: #d51243 !important;
+}
+
+
 
 
 

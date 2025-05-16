@@ -19,15 +19,16 @@ const Header = () => {
 
     const cartItems = context.cartValues.cart;
 
-    const totalPrice = cartItems.reduce((acc, item) => {
-        return acc + item.price * item.quantity;
+    const totalPrice = cartItems ? cartItems.reduce((acc, item) => {
+        return acc + (item.price * item.quantity);
     }
-        , 0);
+        , 0) : 0;
 
-    const totalItems = cartItems.reduce((acc, item) => {
+    const totalItems = cartItems ? cartItems.reduce((acc, item) => {
         return acc + item.quantity;
     }
-        , 0);
+        , 0) : 0;
+
 
     return (
         <>

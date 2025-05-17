@@ -896,8 +896,8 @@ nav .navPart2 ul li .subMenu a button {
 
 .productItem .productInfo .cart-count button {
   min-width: 0px !important;
-  height: 34px !important;
-  width: 34px !important;
+  height: 38.5px !important;
+  width: 38.5px !important;
 }
 
 .productItem .productInfo .cart-count .minus {
@@ -924,9 +924,10 @@ nav .navPart2 ul li .subMenu a button {
   border-top: 1px solid #edeef5 !important;
   border-bottom: 1px solid #edeef5 !important;
   min-width: 0px !important;
-  height: 34px !important;
+  height: 38.5px !important;
   text-align: center !important;
   pointer-events: none !important;
+  flex: 1;
 }
 
 .productSlider .slick-arrow {
@@ -1039,6 +1040,10 @@ nav .navPart2 ul li .subMenu a button {
   display: none;
 }
 
+.productRow .cardsRow .grid-item .productItem.show .productInfo .cart-count {
+  display: none !important;
+}
+
 .productRow .cardsRow .grid-item .productItem.shadow {
   position: absolute;
   top: 0px;
@@ -1048,13 +1053,21 @@ nav .navPart2 ul li .subMenu a button {
   z-index: 0;
 }
 
-.productRow .cardsRow .grid-item .productItem.shadow .productInfo button {
+.productRow .cardsRow .grid-item .productItem.shadow .productInfo .addToCartBtn {
   background: #233a95 !important;
   color: #fff !important;
   border: 1px solid #233a95 !important;
   border-radius: 30px !important;
   text-transform: capitalize !important;
   transform: translateY(50%);
+}
+
+.productRow .cardsRow .grid-item .productItem.shadow .productInfo .cart-count {
+  display: none !important;
+}
+
+.productRow .cardsRow .grid-item:hover .productItem.shadow .productInfo .cart-count {
+  display: flex !important;
 }
 
 .productRow .cardsRow .grid-item:hover .productItem.shadow {
@@ -1064,7 +1077,7 @@ nav .navPart2 ul li .subMenu a button {
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.productRow .cardsRow .grid-item:hover .productItem.shadow .productInfo button {
+.productRow .cardsRow .grid-item:hover .productItem.shadow .productInfo .addToCartBtn {
   transform: translateY(0px);
   transition: transform 0.3s ease-in-out;
 }
@@ -2559,9 +2572,6 @@ footer .footerBottom .container ul a {
   opacity: 0.8 !important;
   transition: all 0.2s ease-in-out;
 }
-
-
-
 
 
 .floating-cart .dropdown-wrapper .cart-notice {

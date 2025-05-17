@@ -47,7 +47,7 @@ const ProductItem = (props) => {
                             <Button className='fullscreen' onClick={viewProductDetails}><SlSizeFullscreen /></Button>
                         </div>
                     </div>
-                    <div className="productInfo">
+                    <div className="productInfo d-flex flex-column">
                         <div className="productName mb-1">
                             <Link to={`/products/${product.id}`}>{product.name}</Link>
                         </div>

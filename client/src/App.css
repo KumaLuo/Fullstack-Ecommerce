@@ -2393,12 +2393,15 @@ footer .footerBottom .container ul a {
   margin-right: 3px;
 }
 
+.cartPage .cartwrapper .contain-items .cart-items {
+  margin-top: 10px;
+}
+
 .cartPage .cartwrapper .contain-items .free-shipping {
   padding: 20px !important;
   border: 1px solid #edeef5 !important;
   border-radius: 7px !important;
   margin-bottom: 20px;
-  margin-top: 10px;
 }
 
 .cartPage .cartwrapper .contain-items .free-shipping .free-shipping-notice {
@@ -2411,6 +2414,23 @@ footer .footerBottom .container ul a {
   color: #d51243 !important;
 }
 
+.cartPage .cartwrapper .contain-items .cart-summary {
+  padding: 20px !important;
+  border: 1px solid #edeef5 !important;
+  border-radius: 7px !important;
+  margin-left: 30px;
+  flex: 0 0 320px;
+  max-width: 320px;
+}
+
+.cartPage .cartwrapper .contain-items .cart-summary h2 {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #edeef5 !important;
+  margin-bottom: 8px;
+}
 
 
 

@@ -82,7 +82,10 @@ const Cart = () => {
 
                             </div>
 
-                            <div className='cart-summary col-4'>
+                            <div className='cart-summary'>
+                                <div className='cart-total'>
+                                    <h2> CART TOTALS</h2>
+                                </div>
                             </div>
 
                         </div>

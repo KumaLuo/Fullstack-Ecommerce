@@ -86,6 +86,34 @@ const Cart = () => {
                                 <div className='cart-total'>
                                     <h2> CART TOTALS</h2>
                                 </div>
+
+                                <table className='cart-summary-table w-100'>
+                                    <tbody>
+                                        <tr>
+                                            <th>Subtotal</th>
+                                            <td >${totalPrice.toFixed(2)}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Shipping</th>
+                                            <td>
+                                                <ul>
+                                                    {totalPrice >= 50 && <li><input type="radio" name="shipping" value="free" checked="true" /> Free Shipping</li>}
+                                                    {totalPrice < 50 && <li><input type="radio" name="shipping" value="charge" checked="true" /> Flat rate: $5.00</li>}
+
+                                                    <li><input type="radio" name="shipping" value="pickup" /> Local pickup</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr className='total'>
+                                            <th style={{ paddingTop: "20px" }}>Total</th>
+                                            {(totalPrice >= 50) && <td style={{ paddingTop: "20px" }}><strong style={{ fontSize: "20px" }}>${totalPrice.toFixed(2)}</strong></td>}
+                                            {totalPrice < 50 && <td style={{ paddingTop: "20px" }}><strong style={{ fontSize: "20px" }}>${(totalPrice + 5).toFixed(2)}</strong></td>}
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <Link to="/checkout">
+                                    <Button className='btn btn-primary checkout'>Proceed to Checkout</Button>
+                                </Link>
                             </div>
 
                         </div>

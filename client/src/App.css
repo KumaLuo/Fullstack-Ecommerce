@@ -2453,6 +2453,44 @@ footer .footerBottom .container ul a {
   padding: 0px !important;
 }
 
+.cartPage .cartwrapper .contain-items .cart-summary .cart-summary-table ul li {
+  margin-bottom: 10px;
+}
+
+.cartPage .cartwrapper .contain-items .cart-summary .checkout {
+  color: #fff !important;
+  background-color: #ed174a !important;
+  border-color: #ed174a !important;
+  height: 50px !important;
+  padding: 0 20px !important;
+  border-radius: 4px !important;
+}
+
+.cartPage .cartwrapper .contain-items .cart-summary .checkout:hover {
+  opacity: 0.8 !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.cartPage .cartwrapper .contain-items .cart-table thead th {
+  text-align: center;
+}
+
+.cartPage .cartwrapper .contain-items .cart-table tbody td {
+  vertical-align: middle !important;
+  border-top: none !important;
+  border-bottom: 1px solid #dee2e6 !important;
+}
+
+.cartPage .cartwrapper .contain-items .cart-table tbody img {
+  max-width: 120px;
+  max-height: 120px;
+}
+
+.cartPage .cartwrapper .contain-items .cart-table tbody h3 {
+  font-size: 14px;
+  text-align: left;
+}
+
 
 
 .floating-cart {

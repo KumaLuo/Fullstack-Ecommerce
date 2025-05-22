@@ -122,7 +122,7 @@ const Cart = () => {
                                                 <th>Price</th>
                                                 <th>Quantity</th>
                                                 <th>Total</th>
-                                                <th>Remove</th>
+                                                <th style={{ padding: '0px' }}></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -131,32 +131,38 @@ const Cart = () => {
                                                     <td>
                                                         <div className='cart-item d-flex align-items-center'>
                                                             <img src={item.image[0]} alt={item.name} />
-                                                            <div className='cart-item-details'>
+                                                            <Link to={`/products/${item.id}`}>
                                                                 <h3>{item.name}</h3>
-                                                            </div>
+                                                            </Link>
                                                         </div>
                                                     </td>
                                                     <td style={{ textAlign: "center" }}>${item.price.toFixed(2)}</td>
                                                     <td>
                                                         <div className='quantity d-flex align-items-center justify-content-center'>
-                                                            <button onClick={() => context.cartValues.removeFromCart(item)}>-</button>
-                                                            <span>{item.quantity}</span>
-                                                            <button onClick={() => context.cartValues.addToCart(item)}>+</button>
+                                                            <button onClick={() => context.cartValues.removeFromCart(item)} className='mr-1'>-</button>
+                                                            <span className='ml-2 mr-2'>{item.quantity}</span>
+                                                            <button onClick={() => context.cartValues.addToCart(item)} className='ml-1'>+</button>
                                                         </div>
                                                     </td>
-                                                    <td style={{ fontWeight: "600" }}>${(item.price * item.quantity).toFixed(2)}</td>
-                                                    <td><Button onClick={() => context.cartValues.clearCartItem(item)}><GoTrash /></Button></td>
+                                                    <td style={{ fontWeight: "600", textAlign: "center" }}>${(item.price * item.quantity).toFixed(2)}</td>
+                                                    <td style={{ padding: '0px' }}><Button onClick={() => context.cartValues.clearCartItem(item)}><GoTrash /></Button></td>
                                                 </tr>
                                             ))}
                                         </tbody>
                                     </table>
                                 </div>
 
-                                <div className='cart-buttons d-flex'>
-                                    <Link to="/cat">
-                                        <Button className='btn btn-primary continue-shopping'>Continue Shopping</Button>
-                                    </Link>
-                                    <Button className='btn btn-primary clear-cart ml-auto' onClick={context.cartValues.clearCart}>Clear Cart</Button>
+                                <div className='cart-buttons'>
+                                    <div className='w-100 d-flex'>
+                                        <Link to="/cat">
+                                            <Button className='btn btn-primary continue-shopping'>Continue Shopping</Button>
+                                        </Link>
+                                        <Button className='btn btn-primary clear-cart ml-auto' onClick={context.cartValues.clearCart}>Clear Cart</Button>
+                                    </div>
+                                    <div className='coupon w-50 mt-3 d-flex'>
+                                        <input type="text" placeholder='Coupon code' />
+                                        <Button className='btn btn-primary apply-coupon ml-3'>Apply Coupon</Button>
+                                    </div>
                                 </div>
                             </div>
 

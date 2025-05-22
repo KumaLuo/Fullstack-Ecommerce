@@ -2491,6 +2491,65 @@ footer .footerBottom .container ul a {
   text-align: left;
 }
 
+.cartPage .cartwrapper .contain-items .cart-table tbody a {
+  text-decoration: none !important;
+  color: #202435 !important;
+  padding-left: 15px;
+}
+
+.cartPage .cartwrapper .contain-items .cart-table tbody button {
+  background-color: transparent !important;
+  color: #202435 !important;
+  border: none !important;
+  padding: 0px !important;
+}
+
+.cartPage .cartwrapper .contain-items .cart-table tbody .quantity button {
+
+  align-items: center;
+  text-align: center;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #edeef5 !important;
+  cursor: pointer;
+  padding: 0px;
+  transition: all 0.2s ease-in-out;
+  border: none !important;
+  font-size: 18px;
+}
+
+.cartPage .cartwrapper .contain-items .cart-buttons button {
+  background-color: #233a95 !important;
+  color: #fff !important;
+  padding: 0px 20px !important;
+  height: 44px !important;
+  font-size: 11px;
+  border-radius: 4px !important;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.cartPage .cartwrapper .contain-items .cart-buttons input {
+  flex: 1;
+  border: transparent;
+  padding: 0 15px;
+  background-color: #f3f4f7;
+  border-radius: 4px;
+}
+
+.cartPage .cartwrapper .contain-items .cart-buttons input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
+
+
+
+
+
 
 
 .floating-cart {

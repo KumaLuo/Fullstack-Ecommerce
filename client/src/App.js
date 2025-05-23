@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Outlet } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import Home from './Pages/Home';
@@ -101,20 +101,41 @@ function App() {
     hasCartItem,
     getCartItemQuantity,
   }
+
+  function MainLayout() {
+    return (
+      <>
+        <Header />
+        <Outlet />
+        <Footer />
+      </>
+    )
+  }
+
+
+  function BlankLayout() {
+    return <Outlet />
+  }
+
   return (
     <BrowserRouter>
       <MyContext.Provider value={{ values, cartValues }}>
-        <Header />
-
         <Routes>
-          <Route path="/" exact={true} element={<Home />} />
-          <Route path="/cat" exact={true} element={<Listing />} />
-          <Route path='/products/:id' exact={true} element={<ProductDetails />} />
-          <Route path='/cart' exact={true} element={<Cart />} />
-          <Route path="/checkout" exact={true} element={<Checkout />} />
-        </Routes>
 
-        <Footer />
+          <Route element={<MainLayout />}>
+            <Route path="/" exact={true} element={<Home />} />
+            <Route path="/cat" exact={true} element={<Listing />} />
+            <Route path='/products/:id' exact={true} element={<ProductDetails />} />
+            <Route path='/cart' exact={true} element={<Cart />} />
+            <Route path="/checkout" exact={true} element={<Checkout />} />
+          </Route>
+
+          <Route element={<BlankLayout />}>
+            <Route path="/signin" exact={true} element={<h1>Sign In</h1>} />
+            <Route path="/signup" exact={true} element={<h1>Sign Up</h1>} />
+          </Route>
+
+        </Routes>
       </MyContext.Provider>
     </BrowserRouter>
   );

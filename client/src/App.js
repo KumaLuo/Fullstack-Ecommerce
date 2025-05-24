@@ -10,6 +10,9 @@ import Listing from './Pages/Listing';
 import ProductDetails from './Pages/ProductDetails';
 import Cart from './Pages/Cart';
 import Checkout from './Pages/Checkout';
+import SignIn from './Pages/SignIn';
+import SignUp from './Pages/SignUp';
+
 
 const MyContext = createContext();
 
@@ -131,8 +134,8 @@ function App() {
           </Route>
 
           <Route element={<BlankLayout />}>
-            <Route path="/signin" exact={true} element={<h1>Sign In</h1>} />
-            <Route path="/signup" exact={true} element={<h1>Sign Up</h1>} />
+            <Route path="/signin" exact={true} element={<SignIn />} />
+            <Route path="/signup" exact={true} element={<SignUp />} />
           </Route>
 
         </Routes>

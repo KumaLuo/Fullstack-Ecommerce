@@ -2717,3 +2717,29 @@ footer .footerBottom .container ul a {
   padding-top: 1.25rem;
   border-top: 1px solid #edeef5;
 }
+
+.sign-in {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-in__bg-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.sign-in .box {
+  width: 400px;
+  height: 500px;
+  background: #fff;
+  margin: auto;
+}

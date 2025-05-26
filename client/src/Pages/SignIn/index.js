@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../../assets/images/bacola-logo.png';
 
 
@@ -31,7 +32,55 @@ const SignIn = () => {
 
             <div className="container">
                 <div className="box card p-3 shadow border-0 align-items-center">
-                    <img src={logo} alt="Bacola Logo" className="mb-2 w-75" />
+                    <img src={logo} alt="Bacola Logo" className="w-75" />
+                    <div className="w-100">
+                        <h2>Sign In</h2>
+                        <form className="w-100">
+                            <div className="mb-3">
+                                <input
+                                    type="email"
+                                    className="form-control"
+                                    placeholder="Email"
+                                    required
+                                />
+                            </div>
+                            <div className="mb-2">
+                                <input
+                                    type="password"
+                                    className="form-control"
+                                    placeholder="Password"
+                                    required
+                                />
+                            </div>
+                            <Link className='d-flex mb-2'>Forget Password?</Link>
+                            <button type="submit" className="btn btn-primary w-100">
+                                Sign In
+                            </button>
+                        </form>
+                        <p className="text-center mt-3">
+                            Don't have an account? <a href="/signup">Sign Up</a>
+                        </p>
+
+                        <p className="text-center">
+                            Or continue with social accounts
+                        </p>
+
+                        <div className="d-flex justify-content-center">
+
+                            <img src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000" alt="Google Icon" className="me-2" onClick={() => window.location.href = 'https://google.com'} />
+
+                            <img src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" alt="Facebook Icon" className="me-2" onClick={() => window.location.href = 'https://facebook.com'} />
+
+                            <img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="Ins Icon" className="me-2" onClick={() => window.location.href = 'https://instagram.com'} />
+
+                            <img src="https://img.icons8.com/?size=100&id=yoQabS8l0qpr&format=png&color=000000" alt="Twitter Icon" className="me-2" onClick={() => window.location.href = 'https://twitter.com'} />
+
+
+
+                        </div>
+
+                    </div>
+
 
 
                 </div>

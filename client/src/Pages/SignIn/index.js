@@ -44,7 +44,7 @@ const SignIn = () => {
                                     required
                                 />
                             </div>
-                            <div className="mb-2">
+                            <div className="mb-3">
                                 <input
                                     type="password"
                                     className="form-control"
@@ -52,20 +52,49 @@ const SignIn = () => {
                                     required
                                 />
                             </div>
-                            <Link className='d-flex mb-2'>Forget Password?</Link>
+                            <div className="security-code mb-2 d-flex align-items-center">
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    placeholder="Security Code"
+                                    required
+                                />
+
+                                <img
+                                    src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000"
+                                    alt="Security Code Icon"
+                                    onClick={() => alert('Security code clicked!')}
+                                    style={{ cursor: 'pointer', marginLeft: '10px', maxHeight: '40px', minWidth: '40%' }}
+                                />
+
+                            </div>
+                            <div className="mb-3 d-flex align-items-center">
+                                <Link className='d-flex'>Forget Password?</Link>
+                                <div className="ml-auto form-check">
+                                    <input
+                                        type="checkbox"
+                                        className="form-check-input"
+                                        id="rememberMe"
+                                    />
+                                    <label className="form-check-label" htmlFor="rememberMe">
+                                        Remember Me
+                                    </label>
+                                </div>
+                            </div>
+
                             <button type="submit" className="btn btn-primary w-100">
                                 Sign In
                             </button>
                         </form>
-                        <p className="text-center mt-3">
-                            Don't have an account? <a href="/signup">Sign Up</a>
+                        <p className="text-center">
+                            Don't have an account? <a href="/signup"><strong>Sign Up</strong></a>
                         </p>
 
-                        <p className="text-center">
+                        <p className="text-center" style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>
                             Or continue with social accounts
                         </p>
 
-                        <div className="d-flex justify-content-center">
+                        <div className="icons d-flex justify-content-center">
 
                             <img src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000" alt="Google Icon" className="me-2" onClick={() => window.location.href = 'https://google.com'} />
 

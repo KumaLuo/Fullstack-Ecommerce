@@ -2739,7 +2739,35 @@ footer .footerBottom .container ul a {
 
 .sign-in .box {
   width: 400px;
-  height: 500px;
+  height: 520px;
   background: #fff;
   margin: auto;
+}
+
+.sign-in .box form {
+  padding: 15px;
+}
+
+.sign-in .box input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.sign-in .box input {
+  border: 1px solid transparent;
+  border-bottom: 1px solid #d9d9e9 !important;
+}
+
+
+
+.sign-in .box .icons img {
+  width: 10%;
+  height: auto;
+  cursor: pointer;
+  margin: 0px 5px;
+}
+
+.sign-in .box .icons img:hover {
+  opacity: 0.8;
+  transition: all 0.2s ease-in-out;
 }

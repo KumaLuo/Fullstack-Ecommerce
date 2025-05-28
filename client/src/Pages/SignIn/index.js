@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/bacola-logo.png';
+import TextField from '@mui/material/TextField';
 
 
 const SignIn = () => {
@@ -36,35 +37,40 @@ const SignIn = () => {
                     <div className="w-100">
                         <h2>Sign In</h2>
                         <form className="w-100">
-                            <div className="mb-3">
-                                <input
+                            <div className='form-group mb-3'>
+                                <TextField
                                     type="email"
                                     className="form-control"
-                                    placeholder="Email"
                                     required
+                                    fullWidth
+                                    variant='standard'
+                                    label="Email"
                                 />
-                            </div>
-                            <div className="mb-3">
-                                <input
+
+                                <TextField
                                     type="password"
-                                    className="form-control"
-                                    placeholder="Password"
+                                    className="form-control mt-3"
                                     required
+                                    fullWidth
+                                    variant='standard'
+                                    label="Password"
                                 />
                             </div>
-                            <div className="security-code mb-2 d-flex align-items-center">
-                                <input
+                            <div className="security-code d-flex mb-3 align-items-center">
+                                <TextField
                                     type="text"
                                     className="form-control"
-                                    placeholder="Security Code"
                                     required
+                                    fullWidth
+                                    variant='standard'
+                                    label="Security Code"
                                 />
 
                                 <img
-                                    src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000"
+                                    src="https://media.istockphoto.com/id/500593190/photo/composition-finger-frame-mans-hands-capture-the-sunset.jpg?s=612x612&w=0&k=20&c=S7cuvvC_hlu39Fj5jon6__3DD0j265aAsqvYX4C0lEM="
                                     alt="Security Code Icon"
                                     onClick={() => alert('Security code clicked!')}
-                                    style={{ cursor: 'pointer', marginLeft: '10px', maxHeight: '40px', minWidth: '40%' }}
+                                    style={{ cursor: 'pointer', marginLeft: '10px', marginTop: '16px', minWidth: '40%', maxHeight: '40px' }}
                                 />
 
                             </div>
@@ -86,11 +92,11 @@ const SignIn = () => {
                                 Sign In
                             </button>
                         </form>
-                        <p className="text-center">
+                        <p className="text-center mb-2 mt-3">
                             Don't have an account? <a href="/signup"><strong>Sign Up</strong></a>
                         </p>
 
-                        <p className="text-center" style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>
+                        <p className="text-center" style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px', marginTop: '8px' }}>
                             Or continue with social accounts
                         </p>
 

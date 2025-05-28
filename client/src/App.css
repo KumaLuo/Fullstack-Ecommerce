@@ -2744,8 +2744,13 @@ footer .footerBottom .container ul a {
   margin: auto;
 }
 
+.sign-in .box h2 {
+  margin-bottom: 0;
+  padding: 10px 0 0 0;
+}
+
 .sign-in .box form {
-  padding: 15px;
+  padding: 5px, 15px, 5px, 15px;
 }
 
 .sign-in .box input:focus {

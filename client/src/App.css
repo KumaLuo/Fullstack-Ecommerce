@@ -2744,13 +2744,43 @@ footer .footerBottom .container ul a {
   margin: auto;
 }
 
+.border-effect {
+  position: relative;
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.border-effect::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background-color: #102a44;
+  content: "";
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+
+.border-effect:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.border-effect:hover::after {
+  width: 100%;
+}
+
 .sign-in .box h2 {
   margin-bottom: 0;
-  padding: 10px 0 0 0;
+  padding: 10px 0 0 15px;
 }
 
 .sign-in .box form {
-  padding: 5px, 15px, 5px, 15px;
+  padding: 5px 15px 5px 15px;
 }
 
 .sign-in .box input:focus {
@@ -2765,7 +2795,9 @@ footer .footerBottom .container ul a {
 
 
 
-.sign-in .box .icons img {
+
+
+/* .sign-in .box .icons img {
   width: 10%;
   height: auto;
   cursor: pointer;
@@ -2775,4 +2807,4 @@ footer .footerBottom .container ul a {
 .sign-in .box .icons img:hover {
   opacity: 0.8;
   transition: all 0.2s ease-in-out;
-}
+} */

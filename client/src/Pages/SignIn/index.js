@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Button } from '@mui/material';
 import logo from '../../assets/images/bacola-logo.png';
 import TextField from '@mui/material/TextField';
 
@@ -75,7 +75,8 @@ const SignIn = () => {
 
                             </div>
                             <div className="mb-3 d-flex align-items-center">
-                                <Link className='d-flex'>Forget Password?</Link>
+                                {/* <Link className='d-flex'>Forget Password?</Link> */}
+                                <a href="/forget-password" className='border-effect cursor'>Forget Password?</a>
                                 <div className="ml-auto form-check">
                                     <input
                                         type="checkbox"
@@ -92,15 +93,15 @@ const SignIn = () => {
                                 Sign In
                             </button>
                         </form>
-                        <p className="text-center mb-2 mt-3">
-                            Don't have an account? <a href="/signup"><strong>Sign Up</strong></a>
+                        <p className="text-center mb-2 mt-2">
+                            Don't have an account? <a href="/signup" className='border-effect cursor'><strong>Sign Up</strong></a>
                         </p>
 
                         <p className="text-center" style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px', marginTop: '8px' }}>
                             Or continue with social accounts
                         </p>
 
-                        <div className="icons d-flex justify-content-center">
+                        {/* <div className="icons d-flex justify-content-center">
 
                             <img src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000" alt="Google Icon" className="me-2" onClick={() => window.location.href = 'https://google.com'} />
 
@@ -110,10 +111,13 @@ const SignIn = () => {
 
                             <img src="https://img.icons8.com/?size=100&id=yoQabS8l0qpr&format=png&color=000000" alt="Twitter Icon" className="me-2" onClick={() => window.location.href = 'https://twitter.com'} />
 
-
-
+                        </div> */}
+                        <div className='w-100 d-flex justify-content-center'>
+                            <Button variant="outlined" className="w-75" style={{ textDecoration: 'none', fontWeight: '600' }}>
+                                <img src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000" alt="Google Icon" style={{ width: '28px', height: '28px', marginRight: "10px" }} />
+                                Sign in with Google
+                            </Button>
                         </div>
-
                     </div>
 
 

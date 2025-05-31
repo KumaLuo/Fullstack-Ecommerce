@@ -89,9 +89,15 @@ const SignIn = () => {
                                 </div>
                             </div>
 
-                            <button type="submit" className="btn btn-primary w-100">
-                                Sign In
-                            </button>
+                            <div className="d-flex align-items-center">
+                                <button type="submit" className="btn btn-primary w-75">
+                                    Sign In
+                                </button>
+
+                                <button type="button" className="btn btn-secondary ml-auto" onClick={() => window.location.href = '/'}>
+                                    Cancel
+                                </button>
+                            </div>
                         </form>
                         <p className="text-center mb-2 mt-2">
                             Don't have an account? <a href="/signup" className='border-effect cursor'><strong>Sign Up</strong></a>

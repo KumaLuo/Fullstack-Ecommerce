@@ -41,7 +41,7 @@ const SignIn = () => {
                                 <TextField
                                     type="email"
                                     className="form-control"
-                                    required
+                                    required={true}
                                     fullWidth
                                     variant='standard'
                                     label="Email"
@@ -50,7 +50,7 @@ const SignIn = () => {
                                 <TextField
                                     type="password"
                                     className="form-control mt-3"
-                                    required
+                                    required={true}
                                     fullWidth
                                     variant='standard'
                                     label="Password"
@@ -60,7 +60,7 @@ const SignIn = () => {
                                 <TextField
                                     type="text"
                                     className="form-control"
-                                    required
+                                    required={true}
                                     fullWidth
                                     variant='standard'
                                     label="Security Code"

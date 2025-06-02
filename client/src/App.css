@@ -2718,7 +2718,8 @@ footer .footerBottom .container ul a {
   border-top: 1px solid #edeef5;
 }
 
-.sign-in {
+.sign-in,
+.sign-up {
   width: 100%;
   height: 100vh;
   position: relative;
@@ -2737,7 +2738,8 @@ footer .footerBottom .container ul a {
   z-index: -1;
 }
 
-.sign-in .box {
+.sign-in .box,
+.sign-up .box {
   width: 400px;
   height: 520px;
   background: #fff;
@@ -2791,6 +2793,10 @@ footer .footerBottom .container ul a {
 .sign-in .box input {
   border: 1px solid transparent;
   border-bottom: 1px solid #d9d9e9 !important;
+}
+
+.css-1ljffdk-MuiFormLabel-asterisk {
+  color: #d51243 !important;
 }
 
 
